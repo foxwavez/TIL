@@ -30,13 +30,18 @@ sameString(a: "icecream", b: "icecream")
 // 자연수를 입력받아 그 수의 약수를 모두 출력하는 함수
 // input : num3
 // output:
-// work: num3 
+// work: num3 % 1...num3 == 0
 
-/*
-func divisor() {
-    print()
+
+func divisor(of: UInt) {
+    for number in 1...of  {
+        if of % number == 0 {
+            print(number, terminator: " ")
+        }
+    }
 }
-*/
+divisor(of: 10)
+
 
 // 100 이하의 자연수 중 3과 5의 공배수를 모두 출력하는 함수
 func commonMultiple() {
