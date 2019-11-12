@@ -6,9 +6,9 @@
       var = Variables 나중에 변경이 가능한 변수 var
       let = Constants 나중에 변경이 불가능한 상수 let */
    
-      let number1: Int = 10
+      var number1: Int = 10
       number1 = 10
-//  에러가 난다
+
  
       var number2: Int = 20
       number2 = 40
