@@ -42,6 +42,8 @@ func divisor(of: UInt) {
 }
 divisor(of: 10)
 
+print()
+
 
 // 100 이하의 자연수 중 3과 5의 공배수를 모두 출력하는 함수
 func commonMultiple() {
