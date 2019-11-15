@@ -15,7 +15,10 @@
 
 let dict: [String: String] = ["철수": "apple", "영희": "banana", "진수" : "grape", "미희" : "strawberry"]
 func match(dic: [String: String]) -> [String] {
+    let result = [" "]
     
+    // contains // 이 문자열 안에 이게 속해 있는 가
+    return result
 }
 
 
@@ -47,11 +50,5 @@ func asdf(input: [Int]) {
 //    return 123
 //}
 //numberReverse(number: 123)
-
-
-
-
-
-
 
 
