@@ -13,13 +13,33 @@
  결과 : "숫자 1 : 1개, 숫자 3 : 3개, 숫자 8 : 1개"
  */
 
-let dict: [String: String] = ["철수": "apple", "영희": "banana", "진수" : "grape", "미희" : "strawberry"]
-func match(dic: [String: String]) -> [String] {
-    let result = [" "]
+// collection type에서 배열만 index가 있어 순서가 차례대로 있다
+
+let dict: [String: String] = [
+    "철수": "apple",
+    "영희": "banana",
+    "진수" : "grape",
+    "미희" : "strawberry"
+]
+
+// 함수를 구현한다 ()는 parameter의 타입의 목록을(parameter가 여러개가 될 수 있기 때문에 목록들) 적는 곳이다
+func match(dict: [String: String]) -> [String] {
+    var result: [String] = []
     
-    // contains // 이 문자열 안에 이게 속해 있는 가
+    for findE in dict {
+        let fruit = findE.value
+        if fruit.contains("e") {
+            // "e"가 포함된 문자일 경우에 아래 statement가 실행된다.
+            result.append(fruit)
+        }
+    }
+    // contains == collectiontype에서 쓰는 메소드고 이게 속해 있는지 아닌지 확인 하는 메소드
     return result
 }
+
+match(dict: dict)
+// match 라는 함수를 실행한다. 호출한다
+// () -> 호출하는 경우 이게 뒤에 붙으면 실행한다는 뜻이다
 
 
 func asdf(input: [Int]) {
@@ -52,3 +72,48 @@ func asdf(input: [Int]) {
 //numberReverse(number: 123)
 
 
+let airport: [String: String] = [
+    "ICN": "Korea",
+    "NAR": "Japan",
+    "KUR": "malaysia"
+]
+
+ // 2개 return N을 가지고 있는 key  / a를 가지고 있는 value
+//for find in airport {
+//
+//}
+
+func test(dict: [String: String]) -> ([String], [String]) {
+    var keys: [String] = []
+    var values: [String] = []
+    
+    for (aa, bb) in dict {
+        
+        if let _ = aa.firstIndex(of: "N") {
+                        // firstIndex 어떠한 배열 안에 of에 들어가는 해당 값이 있는지 없는 지 확인하고, 있다면 몇 번째 위치인지를 알려준다,
+                        // 하지만 배열 안에 of에 들어가는 해당 값이 있는 지 없는 지 모르기 때문에 optional 값으로 반환
+            keys.append(aa)
+        }
+        
+//        if bb.contains("a") {
+//            values.append(bb)
+//        }
+        
+        for x in bb {
+            if x == "a" {
+                values.append(bb)
+            }
+        }
+        
+    }
+    
+    return (keys, values)
+}
+
+let temp = test(dict: airport)
+
+print("N 을 가지고 있는 key 들", temp.0)
+print("a 를 가지고 있는 value 들", temp.1)
+
+
+let ints = [1, 3, 5]
