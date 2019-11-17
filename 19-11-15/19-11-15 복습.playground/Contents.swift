@@ -120,3 +120,13 @@ OUTER: for i in 0...3 {
 //   inner 3
 // outer 1
 // j : 0
+
+var threeValues: (Int, Double, String) = (10, 100.0, "이름")
+
+print(threeValues)
+
+threeValues.0 = 5
+threeValues.1 = 10.0
+threeValues.2 = "Name"
+
+print(threeValues)
