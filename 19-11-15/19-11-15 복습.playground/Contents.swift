@@ -121,12 +121,25 @@ OUTER: for i in 0...3 {
 // outer 1
 // j : 0
 
-var threeValues: (Int, Double, String) = (10, 100.0, "이름")
 
-print(threeValues)
 
-threeValues.0 = 5
-threeValues.1 = 10.0
-threeValues.2 = "Name"
+var threeValues = (intValue:10, doubleValue: 100.0, strName: "이름")
+threeValues.intValue
+threeValues.doubleValue
+threeValues.strName
 
-print(threeValues)
+let somePoint0 = (1, 1)
+
+switch somePoint0 {
+case (0, 0):
+    print("\(somePoint0) is at the origin")
+case (_, 0):
+    print("\(somePoint0) is on the x-axis")
+case (0, _):
+    print("\(somePoint0) is on the y-axis")
+case (-2...2, -2...2):
+    print("\(somePoint0) is inside the box")
+default:
+    print("\(somePoint0) is outside of the box")
+}
+
