@@ -1,28 +1,28 @@
-//class Animal {
-//    var brain: Bool = true
-//    var legs: Int = 0
-//}
-//
-//class Animal0 {
-//    var brain: Bool
-//    var legs: Int
-//
-//    init() {
-//        self.brain = true
-//        self.legs = 0
-//    }
-//}
-//
-//class Animal1 {
-//    var brain: Bool
-//    var legs: Int
-//
-//    init(brain: Bool, legs: Int) {
-//        self.brain = brain
-//        self.legs = legs
-//    }
-//}
-//let animal1 = Animal1(brain: true, legs: 0)
+class Animal0 {
+    var brain: Bool = true
+    var legs: Int = 0
+}
+
+class Animal1 {
+    var brain: Bool
+    var legs: Int
+
+    init() {
+        self.brain = true
+        self.legs = 0
+    }
+}
+
+class Animal2 {
+    var brain: Bool
+    var legs: Int
+
+    init(brain: Bool, legs: Int) {
+        self.brain = brain
+        self.legs = legs
+    }
+}
+let anima2 = Animal2(brain: true, legs: 0)
 
 
 
