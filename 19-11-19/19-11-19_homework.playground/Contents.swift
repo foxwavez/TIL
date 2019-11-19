@@ -23,7 +23,7 @@ class Animal2 {
     }
 }
 let anima2 = Animal2(brain: true, legs: 0)
-
+// Initialize 이해를 위해 test 작성
 
 
 class Animal {
