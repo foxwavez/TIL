@@ -98,3 +98,19 @@ lazyStored1.area        // 이전에 최초 실행 시 저장된 값에 접근�
 let lazyStored2 = LazyStoredProperty()
 lazyStored2.width = 30  // lazy 지연저장 프로퍼티므로 호출할 때 width 값을 넣어 초기화되고 실행된다
 lazyStored2.area // width의 값이 이미 30이 넣어진 상태로 계산됨
+
+
+class ComputedProperty {
+    // Stored + Computed get(read), set(write)
+    private var _koreanWon = 0.0
+    var wonToDollar: Double {
+        get {
+            return _koreanWon / 1136.5
+        }
+        set (myValue) {
+            _koreanWon = myValue
+            // myValue 설정 시 newValue 대신 myValue로 사용 사능
+        }
+    }
+}
+computed.wonToDollar
