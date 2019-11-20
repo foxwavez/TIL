@@ -113,4 +113,12 @@ class ComputedProperty {
         }
     }
 }
-computed.wonToDollar
+
+class TypeProperty {
+    static var unit: String = "cm"
+//    class var shared: TypeProperty = TypeProperty()
+    var width = 5.0
+}
+let square = TypeProperty()  // 5.0
+square.width
+TypeProperty.unit  // "cm"
