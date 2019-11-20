@@ -287,6 +287,15 @@ class sphere {
 
 class Cone {
     var radius: Double
+    var height: Double
+    
+    init(radius: Double, height: Double) {
+        self.radius = radius
+        self.height = height
+    }
+    func geVolume() -> Double {
+        return 1/3 * Double.pi * radius * radius * height
+    }
 }
 
 class SignUp {
