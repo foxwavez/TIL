@@ -156,6 +156,139 @@ calculator.reset()      // 0
 /*
 3. 첨부된 그림을 참고하여 각 도형별 클래스를 만들고 각각의 넓이, 둘레, 부피를 구하는 프로퍼티와 메서드 구현하기
 */
+class Square {
+    var length: Double
+    
+    init(length: Double) {
+        self.length = length
+    }
+    
+    func getArea() -> Double {
+        return length * length
+    }
+    
+    func getPerimeter() -> Double {
+        return length * 4
+    }
+}
+
+class Rectangle {
+    var width: Double
+    var height: Double
+    
+    init(width: Double, height: Double) {
+        self.width = width
+        self.height = height
+    }
+    
+    func getArea() -> Double {
+        return width * height
+    }
+    
+    func getPerimeter() -> Double {
+        return (width * 2) + (height * 2)
+    }
+}
+
+class Circle {
+    var radius: Double
+    
+    init(radius: Double) {
+        self.radius = radius
+    }
+    
+    func getArea() -> Double {
+        return radius * Double.pi
+    }
+    func circumference() -> Double {
+        return 2 * (radius * Double.pi)
+    }
+}
+
+class Triangle {
+    var baseLine: Double
+    var height: Double
+    
+    init(baseLine: Double, height: Double) {
+        self.baseLine = baseLine
+        self.height = height
+    }
+    
+    func getArea() -> Double {
+        return 0.5 * (baseLine * height)
+    }
+}
+
+class Trapezoid {
+    var baseLine: Double
+    var height: Double
+    var upperLine: Double
+    
+    init(baseLine: Double, height: Double, upperLine: Double) {
+        self.baseLine = baseLine
+        self.height = height
+        self.upperLine = upperLine
+    }
+    func getArea() -> Double {
+        return 0.5 * height * (baseLine + upperLine)
+    }
+}
+
+class Cube {
+    var length: Double
+    
+    init(length: Double) {
+        self.length = length
+    }
+    
+    func getVolume() -> Double {
+        return length * length * length
+    }
+}
+
+class RectanglularSolid {
+    var length: Double
+    var width: Double
+    var height: Double
+    
+    init(length: Double, width: Double, height: Double) {
+        self.length = length
+        self.height = height
+        self.width = width
+    }
+    func getVolume() -> Double {
+        return length * height * width
+    }
+}
+
+class CircularCyilinder {
+    var radius: Double
+    var height: Double
+    
+    init(radius: Double, height: Double) {
+        self.radius = radius
+        self.height = height
+    }
+    func getVolume() -> Double {
+        return radius * radius * Double.pi * height
+    }
+}
+
+class sphere {
+    var radius: Double
+    
+    init(radius: Double) {
+        self.radius = radius
+    }
+    func getVolume() -> Double {
+        return 4/3 * Double.pi * radius * radius * radius
+    }
+}
+
+class Cone {
+    var radius: Double
+}
+
 class SignUp {
 var name: String
 var id: String
@@ -168,3 +301,4 @@ var age: Int
     }
 }
 SignUp(name: "박준원", id: "ph-1", age: 35)
+
