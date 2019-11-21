@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var stateLable: UILabel!
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var minusButton: UIButton!
@@ -42,6 +42,7 @@ class ViewController: UIViewController {
         stateLable.text = "\(count)"
         stateLable.textColor = .systemRed
         stateLable.backgroundColor = .systemYellow
-
+        
+    }
+    
 }
-

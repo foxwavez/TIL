@@ -19,9 +19,6 @@
                                 <rect key="frame" x="71" y="373" width="120" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="plusTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o42-sf-XUS"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REg-rc-gse">
                                 <rect key="frame" x="213" y="373" width="120" height="36"/>
