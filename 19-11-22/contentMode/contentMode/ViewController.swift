@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func touchedSegment(_ sender: UISegmentedControl) {
-        
+        segmentedControl.addTarget(self, action: "action:", forControlEvents: .ValueChanged)
     }
     
 }
