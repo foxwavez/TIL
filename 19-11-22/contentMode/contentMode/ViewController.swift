@@ -9,19 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var imageFire: UIImageView!
+    var first = "first"
+    var second = "second"
+    
     @IBOutlet weak var segment: UISegmentedControl!
+    @IBOutlet weak var segmentLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        segment.addTarget(self, action: #selector(segmentTouched(_:)
+            ), for: .valueChanged)
+        segmentLabel.text = "first"
     }
-    class UISegmentedControl : UIControl {
-    @IBAction func touchedSegment(_ sender: UISegmentedControl) {
-        segmentedControl.addTarget(self, action: "action:", forControlEvents: .ValueChanged)
-        func insertSegment(with image: UIImage?, at segment: Int, animated: Bool)
+    
+    @objc func segmentTouched(_ sender: UISegmentedControl) {
+        segmentLabel.text = second
     }
-    }
+    
 }
 
