@@ -24,7 +24,14 @@ class ViewController: UIViewController {
     }
     
     @objc func segmentTouched(_ sender: UISegmentedControl) {
-        segmentLabel.text = second
+//        if segmentLabel.text == first {
+//            segmentLabel.text = second
+//        } else if segmentLabel.text == second {
+//            segmentLabel.text = first
+//        }
+        
+        let index = sender.selectedSegmentIndex
+        segmentLabel.text = sender.titleForSegment(at: index)
     }
     
 }
