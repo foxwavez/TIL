@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var segment: UISegmentedControl!
     @IBOutlet weak var segmentLabel: UILabel!
+    @IBOutlet weak var switchToggle: UISwitch!
+    
+    @IBOutlet weak var switchLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +24,13 @@ class ViewController: UIViewController {
         segment.addTarget(self, action: #selector(segmentTouched(_:)
             ), for: .valueChanged)
         segmentLabel.text = "first"
+        segmentLabel.font = UIFont.systemFont(ofSize: 36)
+        segmentLabel.frame = CGRect(x: 32, y: 300, width: 360, height: 100)
+        segment.center = CGPoint(x: view.center.x, y: view.center.y - 200)
+        switchToggle.addTarget(self, action: #selector(switchToched(_:)), for: .valueChanged)
+        switchToggle.frame = CGRect(x: view.center.x , y: view.center.y, width: 360, height: 200)
+        switchLabel.text = "ON"
+        switchLabel.frame = CGRect(x: 200, y: 500, width: 360, height: 200)
     }
     
     @objc func segmentTouched(_ sender: UISegmentedControl) {
@@ -33,6 +43,12 @@ class ViewController: UIViewController {
         let index = sender.selectedSegmentIndex
         segmentLabel.text = sender.titleForSegment(at: index)
     }
-    
+    @objc func switchToched(_ sender:UISwitch) {
+        if switchToggle.isOn {
+            switchLabel.text = "ON"
+        } else {
+            switchLabel.text = "OFF"
+        }
+    }
 }
 
