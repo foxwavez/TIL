@@ -39,14 +39,15 @@ class BViewController: UIViewController {
     
     @objc private func nextViewButton( _sender: UIButton){
         presentingViewController?.view.backgroundColor = .cyan
+        count = count + 1
+        label.text = "\(count)"
         
         guard let vc = presentingViewController as? ViewController else { return }
         vc.button.setTitle("button", for: .normal)
         
+        vc.count = count
+        
         dismiss(animated: true)
-//
-//        count = count + 1
-//        label.text = "\(count)"
     }
     /*
     // MARK: - Navigation
