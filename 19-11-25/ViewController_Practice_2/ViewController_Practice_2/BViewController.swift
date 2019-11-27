@@ -36,6 +36,7 @@ class BViewController: UIViewController {
         goingBack.count = count
         goingBack.label.text = "\(count)"
         
+        
         dismiss(animated: true)
     }
 }
