@@ -102,7 +102,7 @@ print("\n---------- [ Searching ] ----------\n")
 
 let alphabet = ["A", "B", "C", "D", "E"]
 
-if alphabet.contains("A") { //contains : 포함한다 라는 뜻 알파벳 안에 "A" 라는게 포함하고 있니
+if alphabet.contains("A") { //contains : 포함한다 라는 뜻 알파벳 안에 "A" 라는게 포함하고 있다
   print("contains A")
 }
 
