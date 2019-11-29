@@ -168,3 +168,84 @@ let (a,b,c) = getTupleValue()
 
 var max = [50, 23, 29, 1, 45, 39, 59, 19, 15]
 max.max()
+
+func introduce(name: String, age: Int)  {
+    print("안녕하세요 저의 이름은 \(name), 저의 나이는 \(age) 입니다")
+}
+
+introduce(name: "이희진", age: 24)
+
+func evenNumber(number: Int) {
+    if number % 2 == 0 {
+        print("\(number)는 2의 배수 입니다")
+    }
+    else {
+        print("\(number)는 2의 배수가 아닙니다")
+    }
+}
+evenNumber(number: 3)
+evenNumber(number: 4)
+
+func multiple (number2: Int) -> Int {
+    let number1: Int = 10
+    return number1 * number2
+}
+multiple(number2: 4)
+
+
+func average(score1: Int, score2: Int, score3: Int, score4: Int) -> Int {
+    let sum = score1 + score2 + score3 + score4
+    return sum / 4
+}
+average(score1: 90, score2: 80, score3: 70, score4: 60)
+
+func credit(score: Int) -> Character {
+    if score >= 90 {
+        return "A"
+    }
+    else if score >= 80 {
+        return "B"
+    }
+    else if score >= 70 {
+        return "C"
+    }
+    else {
+        return "D"
+    }
+}
+credit(score: 68)
+
+func aa(number1: Int, number2: Int) -> Int {
+    let sum = String(number1) + String(number2)
+    return Int(sum)!
+}
+aa(number1: 10, number2: 10)
+
+func sameString(string1: String, string2: String) {
+    if string1 == string2 {
+        true
+    }
+    else {
+        false
+    }
+}
+sameString(string1: "멍청", string2: "멍청")
+
+func measure(number: Int) {
+    for n in 1...number {
+        if number % n == 0 {
+            print(n)
+        }
+    }
+}
+measure(number: 9)
+
+//func multiple() {
+//    for n in 1...300 {
+//        if n % 3 == 0 || n % 5 == 0 {
+//            print(n)
+//        }
+//    }
+//}
+//multiple()
+
