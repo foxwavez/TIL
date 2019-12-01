@@ -31,13 +31,44 @@ while n < 1000 {
 }
 print("n = \(n)")
 
-func divide (base:  Int) {
+//func divide (base:  Int) {
+//    guard base != 0 else {
+//        print("연산할 수 없습니다.")
+//        return
+//    }
+//    let result = 100 / base
+//    print(result)
+//}
+//divide(base: 5)
+//divide(base: 0)
+
+//func divide (base:  Int) {
+//    if base == 0 {
+//        print("연산을 처리할 수 없습니다.")
+//        return
+//    }
+//    let result = 100 / base
+//    print(result)
+//}
+//divide(base: 5)
+//divide(base: 0)
+
+func divide(base: Int) {
     guard base != 0 else {
         print("연산할 수 없습니다.")
         return
     }
-    let result = 100 / base
+    guard base > 0 else {
+        print("base는 0보다 커야 합니다.")
+        return
+    }
+    guard base < 100 else {
+        print("base는 100보다 작아야 합니다.")
+        return
+    }
+    let result = (100 / base)
     print(result)
 }
-divide(base: 5)
+divide(base: 102)
 divide(base: 0)
+divide(base: 9)

@@ -134,6 +134,5 @@ class ViewController: UIViewController {
             present(alretController, animated: true)
         }
     }
-    
 }
 
