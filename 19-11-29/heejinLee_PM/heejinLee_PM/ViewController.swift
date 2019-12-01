@@ -97,7 +97,7 @@ class ViewController: UIViewController {
     }
     
     @objc func 결제터치(_ sender: Any) {
-        if 소지금_디폴트 >= 0 {
+        if 소지금_디폴트 > OrderPrice {
             let alretController = UIAlertController(
                 title: "결제하기",
                 message: "총 결제 금액은 \(OrderPrice)원입니다.",
@@ -119,7 +119,7 @@ class ViewController: UIViewController {
              소지금_디폴트 -= OrderPrice
              소지금가격.text = "\(소지금_디폴트)원"
         }
-        else if 소지금_디폴트 >= 0 {
+        else if 소지금_디폴트 < OrderPrice {
             let alretController = UIAlertController(
                 title: "결제 실패",
                 message: "소지금액이 부족합니다",
@@ -131,6 +131,7 @@ class ViewController: UIViewController {
              
             }
             alretController.addAction(okAction)
+            present(alretController, animated: true)
         }
     }
     

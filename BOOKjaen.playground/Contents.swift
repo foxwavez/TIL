@@ -30,3 +30,14 @@ while n < 1000 {
     n = n * 2
 }
 print("n = \(n)")
+
+func divide (base:  Int) {
+    guard base != 0 else {
+        print("연산할 수 없습니다.")
+        return
+    }
+    let result = 100 / base
+    print(result)
+}
+divide(base: 5)
+divide(base: 0)
