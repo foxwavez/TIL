@@ -105,7 +105,7 @@ print(optionalInt)
 
 if convertedNumber != nil {
   print("convertedNumber contains some integer value.")
-  //  print("convertedNumber has an integer value of \(convertedNumber).")
+//    print("convertedNumber has an integer value of \(convertedNumber).")
 }
 
 /*:
