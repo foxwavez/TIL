@@ -184,7 +184,7 @@ func desc() -> String {
     return "this is desc()"
 }
 
-func pass() -> () -> String { // 오른쪽 반환타아입은 함수 타입으로 작성되어 있음을 알 수 있다.
+func pass() -> () -> String { // 오른쪽 반환타입은 함수 타입으로 작성되어 있음을 알 수 있다.
     return desc
 }
 
@@ -200,3 +200,51 @@ func broker(base: Int, function fn: (Int)-> Int) -> Int {
 }
 
 broker(base: 3, function: incr(param:))
+
+func successThrough() {
+    print("연산 처리가 성공했습니다.")
+}
+func failThrough() {
+    print("처리 과정에 오류가 발생하였습니다.")
+}
+
+func divide(base: Int, suceess sCallBack:() -> Void, fail fCallBack: () -> Void) -> Int {
+    guard base != 0 else {
+        fCallBack()
+        return 0
+    }
+    defer {
+        sCallBack()
+    }
+    return 100 / base
+}
+divide(base: 30, suceess: successThrough, fail: failThrough)
+
+func outer(base: Int) -> String {
+    func inner(inc: Int) -> String {
+        return "\(inc)를 반환합니다."
+    }
+    let result = inner(inc: base + 1)
+    return result
+}
+outer(base: 3)
+
+func outer0(param: Int) -> (Int) -> String {
+    func inner0 (inc: Int) -> String {
+        return "\(inc)를 리턴합니다"
+    }
+    return inner0
+}
+let fn3 = outer0(param: 3) // outer()가 실행되고, 그 결과로 inner가 대입됩니다
+//let fn4 = fn3(30) // inner(inc: 30)과 동일합니다.
+
+func basic(param: Int) -> (Int) -> Int {
+    let value = param + 20
+    
+    func append(add: Int) -> Int {
+        return value + add
+    }
+    return append(add:)
+}
+let result = basic(param: 10)
+result(10)
