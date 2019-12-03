@@ -248,3 +248,14 @@ func basic(param: Int) -> (Int) -> Int {
 }
 let result = basic(param: 10)
 result(10)
+ 
+let i = { (s1: Int, s2: String) -> Void in
+    print("s1 - \(s1), s2 - \(s2)")
+}
+i(1,"closure")
+
+({ (s1: Int, s2: String) -> Void in
+    print("s1 - \(s1), s2 - \(s2)")
+})(1,"closure")
+
+
