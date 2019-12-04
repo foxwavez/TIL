@@ -55,6 +55,6 @@ class FirstViewController: UIViewController {
         label.text = "Count: \(count)"
     }
     // 코드와 달리 돌아갈 뷰에 unwind를 미리 코드를 작성 한다 그리고 스토리보드에서 버튼을 컨트롤키 누른 상태로 Exit를 연결 해준다
-    // full Screen 하는 방법 스토리보드에서 세그웨이를 누른 상태에서 오른쪽 네비 4버째 아이콘 어트리뷰트를 누르고, presentation을 full screen으로 바꾸어 준다.
+    // full Screen 하는 방법 스토리보드에서 세그웨이를 누른 상태에서 오른쪽 네비 4번째 아이콘 어트리뷰트를 누르고, presentation을 full screen으로 바꾸어 준다.
 }
 
