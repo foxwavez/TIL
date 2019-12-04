@@ -51,46 +51,46 @@ class SecondViewController: UIViewController {
 //
         // 전체를 카운트 역할 : allcounttouched 함수
         
-        // switch : firstVC.dogCount < 8 -> true -> firstVC.dogCount += 1
-//        switch firstVC.dogCount {
-//        case ..<8:
-//            firstVC.dogCount = firstVC.dogCount + 1
-//        default:
-//            firstVC.dogCount = firstVC.dogCount + 0
-//        }
-//
-//        // switch : firstVC.catCount < 10 -> true -> firstVC.catCount += 1
-//        switch firstVC.catCount {
-//        case ..<10:
-//            firstVC.catCount = firstVC.catCount + 1
-//        default:
-//            firstVC.catCount = firstVC.catCount + 0
-//        }
-//
-//        switch firstVC.birdCount {
-//        case ..<15:
-//            firstVC.birdCount = firstVC.birdCount + 1
-//        default:
-//            firstVC.birdCount = firstVC.birdCount + 0
-//        }
-//
-//        firstVC.label.text = "(\(firstVC.dogCount),\(firstVC.catCount),\(firstVC.birdCount))"
-//
-        switch true {
-        case firstVC.dogCount < 8:
+        //switch : firstVC.dogCount < 8 -> true -> firstVC.dogCount += 1
+        switch firstVC.dogCount {
+        case ..<8:
             firstVC.dogCount = firstVC.dogCount + 1
-            firstVC.catCount = firstVC.catCount + 1
-            firstVC.birdCount = firstVC.birdCount + 1
-            firstVC.label.text = "(\(firstVC.dogCount),\(firstVC.catCount),\(firstVC.birdCount))"
-        case firstVC.catCount < 10:
-            firstVC.catCount = firstVC.catCount + 1
-            firstVC.birdCount = firstVC.birdCount + 1
-            firstVC.label.text = "(\(firstVC.dogCount),\(firstVC.catCount),\(firstVC.birdCount))"
-        case firstVC.birdCount < 15:
-            firstVC.label.text = "(\(firstVC.dogCount),\(firstVC.catCount),\(firstVC.birdCount))"
-        default :
-            return
+        default:
+            firstVC.dogCount = firstVC.dogCount + 0
         }
+
+        // switch : firstVC.catCount < 10 -> true -> firstVC.catCount += 1
+        switch firstVC.catCount {
+        case ..<10:
+            firstVC.catCount = firstVC.catCount + 1
+        default:
+            firstVC.catCount = firstVC.catCount + 0
+        }
+
+        switch firstVC.birdCount {
+        case ..<15:
+            firstVC.birdCount = firstVC.birdCount + 1
+        default:
+            firstVC.birdCount = firstVC.birdCount + 0
+        }
+
+        firstVC.label.text = "(\(firstVC.dogCount),\(firstVC.catCount),\(firstVC.birdCount))"
+
+//        switch true {
+//        case firstVC.dogCount < 8:
+//            firstVC.dogCount = firstVC.dogCount + 1
+//            firstVC.catCount = firstVC.catCount + 1
+//            firstVC.birdCount = firstVC.birdCount + 1
+//            firstVC.label.text = "(\(firstVC.dogCount),\(firstVC.catCount),\(firstVC.birdCount))"
+//        case firstVC.catCount < 10:
+//            firstVC.catCount = firstVC.catCount + 1
+//            firstVC.birdCount = firstVC.birdCount + 1
+//            firstVC.label.text = "(\(firstVC.dogCount),\(firstVC.catCount),\(firstVC.birdCount))"
+//        case firstVC.birdCount < 15:
+//            firstVC.label.text = "(\(firstVC.dogCount),\(firstVC.catCount),\(firstVC.birdCount))"
+//        default :
+//            return
+//        }
         
         
         
