@@ -31,6 +31,11 @@ sum2()
 
 let task2: Any = addTwoValues
 
+if let task3 = task2 as? (Int, Int) -> Int {
+    let task4 = task3(1, 2)
+    task4 + task4
+}
+
 if let sum4 = task2 as? Int {
     sum4 + sum4
 }
@@ -104,12 +109,12 @@ class Automobile: Vehicle {
         self.numberOfSeats = numberOfSeats
     }
 }
-class Bus: Vehicle {
-  let isDoubleDecker: Bool
-  let maxSpeed: Int
-    init() {
-        isDoubleDecker = true
-    }
-}
+//class Bus: Vehicle {
+//  let isDoubleDecker: Bool
+//  let maxSpeed: Int
+//    init() {
+//        isDoubleDecker = true
+//    }
+//}
 
 
