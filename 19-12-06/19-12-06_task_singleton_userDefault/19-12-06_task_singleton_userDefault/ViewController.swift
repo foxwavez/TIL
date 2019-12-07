@@ -14,15 +14,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var toggle: UISwitch!
     
-    
     var img = UIImage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        toggle.addTarget(self, action: #selector(toggleTouched), for: .touchUpInside)
-        img = UIImage(named: "dog")!
+        if let str = UserDefaults.standard.string(forKey: "image") {
+            img = UIImage(named: str)!
+        }
+        toggle.addTarget(self, action: #selector(toggleTouched), for: .valueChanged)
+        
         imgView.image = img
         label.text = "dog"
+        
+        
+        UserDefaults.standard.set(label, forKey: "dog")
         
     }
     @objc private func toggleTouched(_ sender: UISwitch) {
@@ -30,6 +35,8 @@ class ViewController: UIViewController {
             img = UIImage(named: "dog")!
             imgView.image = img
             label.text = "dog"
+            imgView.image = UserDefaults.standard.object(forKey: "dog") as? UIImage
+            
         }
         else {
             img = UIImage(named: "cat")!

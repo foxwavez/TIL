@@ -39,7 +39,7 @@ UserDefaults.standard.set(date, forKey: "Date")
 UserDefaults.standard.object(forKey: "Date")
 
 //Q. 저장하지 않은 키를 불러올 때 결과는?
-UserDefaults.standard.integer(forKey: "WrongKey") // 0 -> standard.intege에 옵션을 누른 상태로 커서를 가져다 대먄 타입을 알수 있다
+UserDefaults.standard.integer(forKey: "WrongKey") // 0 -> standard.integer에 옵션을 누른 상태로 커서를 가져다대면 타입을 알수 있다
 UserDefaults.standard.bool(forKey: "WrongKey")    // false -> 그걸로 값이 나오는 걸 유추 할 수 있다.
 UserDefaults.standard.object(forKey: "WrongKey")  // nil
 
