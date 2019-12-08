@@ -112,6 +112,32 @@ let object11 = MySingleton()
 // 그래서 shared 로만 접근할 수 있게 된다.
 
 
+let dd = MySingleton.shared
+
+
+
+class Company {
+   var _members:Int = 5
+   var members:Int {
+      get {
+         return _members
+      }
+      set (newVal) {
+         if (newVal < 1){
+            print("직원수는 한명보다 작을 수 없습니다.")
+         }else{
+            _members = newVal
+         }
+      }
+   }
+    init(members: Int) {
+        self.members = members
+    }
+}
+
+
+let apple = Company(members: 90)
+apple.members
 
 
 
