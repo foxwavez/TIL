@@ -30,6 +30,7 @@ struct FriendList {
   func blockFriend(name: String) {
     // 호출 시 해당 이름의 친구를 blocks 배열에 추가
     // 만약 friends 배열에 포함된 친구라면 friends 배열에서 제거
+    
   }
 }
 
@@ -84,9 +85,13 @@ class FriendList2 {
     // 호출 시 해당 이름의 친구를 blocks 배열에 추가
     // 만약 friends 배열에 포함된 친구라면 friends 배열에서 제거
     let friend2 = Friends2(name2: name)
-    user2.blocks2.contains(friend2)
     
+    if let index = user2.friends2.firstIndex(of: friend2) {
+        user2.friends2.remove(at: index)
+    }
+    if !user2.blocks2.contains(friend2) {
     user2.blocks2.append(friend2)
+    }
     // 기존 친구목록에서 제거
     // 블럭 목록에 기존 멤버인 경우 놔두기, 블록목록에 없는 경우 추가
     
@@ -105,6 +110,7 @@ friendList2.addFriend1(name: "장동건")
 friendList2.addFriend1(name: "정우성")
 user2.friends2   // 원빈, 장동건, 정우성
 
+friendList2.blockFriend2(name: "정우성")
 friendList2.blockFriend2(name: "정우성")
 user2.friends2   // 원빈, 장동건
 user2.blocks2    // 정우성
