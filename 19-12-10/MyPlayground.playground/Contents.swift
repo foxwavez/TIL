@@ -91,7 +91,7 @@ class Car: Vehicle {
         
         
         
-        // override var currentSpeed: Double = 2.0 -> 에러
+//         override var currentSpeed: Double = 2.0 -> 에러
         // 상위 클래스의저장 프로퍼티는 하위클래스에 또 저장프로퍼티로 override(재정의) 불가
         // 상위 클래스에서 저장 프로퍼티, 하위클래스에서 get set 가능해서 오버라이드는 가능하다
         // 상위 클래스 읽기만 (get)만 있는 경우에 하위클래스 set을 사용 불가하다
