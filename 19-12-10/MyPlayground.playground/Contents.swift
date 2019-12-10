@@ -1,5 +1,6 @@
 // 연산프로퍼티는 값을 "저장"하기 보다는 연산을 한다
 // 값이 연산을 통해 바뀌어야 하기 때문에 var 선언해줘야 한다
+// set은 생략 가능, get은 불가능(연산프로퍼티 값 할당, 값 반환 불가)
 class Point {
     var tempX : Int = 1
     var x: Int {
@@ -8,6 +9,11 @@ class Point {
         } // 쓰기, 값을 바꾸는 기능
         set(newValue) {
             tempX = newValue * 2
+            
+//            set(i) { // newValue 대신 (소괄호)를 사용해줄 수 도 있다
+//                tempX = i * 2
+//            }
+
         }
     }
 }
@@ -17,7 +23,11 @@ p.x = 12
 print(p.x)
 p.x = 88
 print(p.x)
+//
 
+
+// 업데이트 되는 데이터에 쓰는 편
+// 프로퍼티 옵저버는 프로퍼티 값의 변화를 관찰하고, 이에 응답
 
 class StepCounter {
 
@@ -37,13 +47,22 @@ let stepCounter = StepCounter()
 stepCounter.totalSteps = 200
 stepCounter.totalSteps = 190
 stepCounter.totalSteps = 300
+// totalSteps에서는 값이 있으면 값이 이미 저장된 후
+
+
+
+
+
+
+
+
 
 
 
 
 class Vehicle { // 탈 것
     var currentSpeed = 0.0 // 현재 스피드, 저장 프로퍼티
-    var description: String { // 설명
+    var description: String { // 설명 get을 생략한 연산 프로퍼티 // 읽기 전용 프로퍼티
         return "traveling at \(currentSpeed) miles per hour"
     }
     func makeNoise() {
@@ -61,7 +80,7 @@ class Car: Vehicle {
     var gear = 1
     var returnStr = ""
                             // 수퍼 클래스와 동일하게 타입 적용해야 한다
-    override var description: String { // Vehicle description 재정의
+    override var description: String { // Vehicle description 재정의 오버라이드
             
         get{
         return super.description + " in gear \(gear)"
@@ -73,8 +92,9 @@ class Car: Vehicle {
         
         
         // override var currentSpeed: Double = 2.0 -> 에러
-        // 저장 프로퍼티는 override(재정의) 불가
-        // 상위 클래스 읽기만 (get)만 있는 경우에 하위클래스 set을 사용 불가하다.
+        // 상위 클래스의저장 프로퍼티는 하위클래스에 또 저장프로퍼티로 override(재정의) 불가
+        // 상위 클래스에서 저장 프로퍼티, 하위클래스에서 get set 가능해서 오버라이드는 가능하다
+        // 상위 클래스 읽기만 (get)만 있는 경우에 하위클래스 set을 사용 불가하다
     }
     override var currentSpeed: Double {
         get{
@@ -103,6 +123,8 @@ class AutomaticCar: Car {
         }
     }
 }
+
+
 let automatic = AutomaticCar()
 automatic.currentSpeed = 35.0
 print("AutomaticCar: \(automatic.description)")
