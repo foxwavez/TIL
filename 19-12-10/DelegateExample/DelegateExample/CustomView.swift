@@ -12,7 +12,7 @@ protocol CustomViewDelegate: class {
     func colorForBackground(_ newColoe: UIColor?) -> UIColor
 }
 
-class CutomView: UIView {
+class CustomView: UIView {
     weak var delegate: CustomViewDelegate?
  //weak사용 하려면 프로토콜의 타입이 class여야 한다
 

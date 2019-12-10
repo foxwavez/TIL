@@ -6,9 +6,6 @@ class User {
 }
 struct Friends: Equatable {
   let name: String
-    init(name: String) {
-        self.name = name
-    }
 }
 
 /*
@@ -23,7 +20,6 @@ class FriendList {
     }
   func addFriend(name: String) {
     // 호출 시 해당 이름의 친구를 friends 배열에 추가
-    
     user.friends.append()
   }
   
