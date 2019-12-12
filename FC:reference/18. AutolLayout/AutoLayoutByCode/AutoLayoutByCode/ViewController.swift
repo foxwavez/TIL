@@ -64,7 +64,8 @@ final class ViewController: UIViewController {
     
     
     // isActive를 통한 제약조건 활성화
-    firstView.translatesAutoresizingMaskIntoConstraints = false
+    firstView.translatesAutoresizingMaskIntoConstraints = false  // 원래 뷰에는 오토리사이징마스크가 설정 되어 있다.
+    // 아래에 내가 별도의 오토레이아웃을 잡아주기 위해서는  false를 해줘야 한다
     firstView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
     firstView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50).isActive = true
     firstView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
