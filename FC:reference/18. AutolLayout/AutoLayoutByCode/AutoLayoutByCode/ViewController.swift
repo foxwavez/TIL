@@ -74,7 +74,7 @@ final class ViewController: UIViewController {
 
     // activate를 통한 제약조건 활성화
     secondView.translatesAutoresizingMaskIntoConstraints = false
-    NSLayoutConstraint.activate([
+    NSLayoutConstraint.activate([ // 위에 코드와 동일하다 이런 방법 있다는 예시
       secondView.topAnchor.constraint(equalTo: firstView.topAnchor, constant: 40),
       secondView.leadingAnchor.constraint(equalTo: firstView.leadingAnchor, constant: 40),
       secondView.bottomAnchor.constraint(equalTo: firstView.bottomAnchor, constant: -40),
