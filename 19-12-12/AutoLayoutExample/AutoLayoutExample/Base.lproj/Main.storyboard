@@ -15,29 +15,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bG-My-a8y">
-                                <rect key="frame" x="20" y="253" width="374" height="400"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0bG-AY-6rb">
-                                        <rect key="frame" x="50" y="50" width="274" height="300"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="274" id="O0L-zz-gYX"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="0bG-AY-6rb" firstAttribute="leading" secondItem="3bG-My-a8y" secondAttribute="leading" constant="50" id="ENf-iF-ilL"/>
-                                    <constraint firstAttribute="width" constant="374" id="gRo-na-HB9"/>
-                                </constraints>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bvx-8i-Kj2" userLabel="red">
+                                <rect key="frame" x="20" y="64" width="182" height="778"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3B8-OW-98i" userLabel="blue">
+                                <rect key="frame" x="212" y="64" width="182" height="778"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="3bG-My-a8y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="209" id="JIe-bc-eWc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3bG-My-a8y" secondAttribute="bottom" constant="209" id="R8c-HX-paT"/>
-                            <constraint firstItem="3bG-My-a8y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qKV-d5-VqK"/>
+                            <constraint firstItem="3B8-OW-98i" firstAttribute="leading" secondItem="bvx-8i-Kj2" secondAttribute="trailing" constant="10" id="1OS-gt-ulv"/>
+                            <constraint firstItem="3B8-OW-98i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="3bY-PS-jo1"/>
+                            <constraint firstItem="bvx-8i-Kj2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BPP-f3-h1i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bvx-8i-Kj2" secondAttribute="bottom" constant="20" id="DUC-33-0Ia"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3B8-OW-98i" secondAttribute="bottom" constant="20" id="Fef-Ez-MBi"/>
+                            <constraint firstItem="bvx-8i-Kj2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Hnh-d8-0qc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3B8-OW-98i" secondAttribute="trailing" constant="20" id="c0k-PF-HR0"/>
+                            <constraint firstItem="3B8-OW-98i" firstAttribute="width" secondItem="bvx-8i-Kj2" secondAttribute="width" id="wxg-3p-FBB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
