@@ -27,9 +27,17 @@ struct FriendList {
         return user
   }
   
-  func blockFriend(name: String) {
+    mutating func blockFriend(name: String) {
     // 호출 시 해당 이름의 친구를 blocks 배열에 추가
     // 만약 friends 배열에 포함된 친구라면 friends 배열에서 제거
+    let friend = Friends1(name: name)
+    if let index = user.friends.firstIndex(of: friend) {
+        user.friends.remove(at: index)
+    }
+    if !user.blocks.contains(friend) {
+        user.blocks.append(friend)
+    }
+    
     
   }
 }

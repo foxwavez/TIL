@@ -29,7 +29,13 @@ class FriendList {
     // 호출 시 해당 이름의 친구를 blocks 배열에 추가
     // 만약 friends 배열에 포함된 친구라면 friends 배열에서 제거
     let 친구모음 = 친구(name: name)
-    user.blocks.append(친구모음)
+    if let index = user.친구들.firstIndex(of: 친구모음) {
+        user.친구들.remove(at: index)
+    }
+    if !user.blocks.contains(친구모음) {
+        user.blocks.append(친구모음)
+    }
+    
     // 기존 친구목록에서 제거
     // 블럭 목록에 기존 멤버인 경우 놔두기, 블록목록에 없는 경우 추가
     
