@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController {
    
     @IBOutlet weak var logoImg: UIImageView!
-    
     @IBOutlet weak var rectangle1: UIView!
     @IBOutlet weak var rectangle2: UIView!
     @IBOutlet weak var rectangle3: UIView!
