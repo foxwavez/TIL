@@ -32,7 +32,6 @@ class ViewController: UIViewController {
     
     private func setUI() {
         logoImg.image = UIImage(named: "fastcampus_logo")
-         view.addSubview(logoImg)
         emailImg.image = UIImage(named: "email")
         pwImg.image = UIImage(named: "password")
         let radius:CGFloat = 6
