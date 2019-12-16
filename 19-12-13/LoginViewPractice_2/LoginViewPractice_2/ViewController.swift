@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     var logoImg = UIImageView()
+    var container = UIView()
+    var emailImg = UIImageView()
+    var pwImg = UIImageView()
     var emailField = UITextField()
     var pwField = UITextField()
     var signBtn = UIButton()
@@ -22,16 +25,25 @@ class ViewController: UIViewController {
     override func viewSafeAreaInsetsDidChange() {
         logoImg.image = UIImage(named: "fastcampus_logo")
         view.addSubview(logoImg)
+        container.
+        emailImg.image = UIImage(named: "email")
+        view.addSubview(emailImg)
         setUI()
     }
     
     private func setUI() {
         
+        // MARK: - logoImg
         logoImg.translatesAutoresizingMaskIntoConstraints = false
         logoImg.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
         logoImg.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor, constant: 0).isActive = true
         logoImg.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.08).isActive = true
         logoImg.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.7).isActive = true
+        // MARK: - container
+        
+        
+        // MARK: - emailImg
+        
         
     }
     
