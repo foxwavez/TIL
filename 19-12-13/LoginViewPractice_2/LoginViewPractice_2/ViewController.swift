@@ -25,7 +25,8 @@ class ViewController: UIViewController {
     override func viewSafeAreaInsetsDidChange() {
         logoImg.image = UIImage(named: "fastcampus_logo")
         view.addSubview(logoImg)
-        container.
+        container.backgroundColor = .yellow
+        view.addSubview(container)
         emailImg.image = UIImage(named: "email")
         view.addSubview(emailImg)
         setUI()
@@ -40,7 +41,11 @@ class ViewController: UIViewController {
         logoImg.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.08).isActive = true
         logoImg.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.7).isActive = true
         // MARK: - container
-        
+        container.translatesAutoresizingMaskIntoConstraints = false
+        container.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor, constant: 0).isActive = true
+        container.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor, constant: 40).isActive = true
+        container.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 1).isActive = true
+        container.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.3).isActive = true
         
         // MARK: - emailImg
         
