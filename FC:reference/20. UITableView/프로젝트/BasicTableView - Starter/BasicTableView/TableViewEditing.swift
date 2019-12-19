@@ -47,8 +47,10 @@ final class TableViewEditing: UIViewController {
     tableView.reloadData()
   }
   
-  @objc func switchToEditing() {
     
+  @objc func switchToEditing() {
+
+    tableView.setEditing(!tableView.isEditing, animated: true)
   }
 }
 
@@ -64,13 +66,71 @@ extension TableViewEditing: UITableViewDataSource {
     cell.textLabel?.text = "\(data[indexPath.row])"
     return cell
   }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+        case .none: print("none")
+        case .delete:
+            data.remove(at: data.firstIndex(of: data[indexPath.row])!)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            print("delete")
+        case .insert:
+            data.insert(Int.random(in: 1...50), at: data.firstIndex(of: data[indexPath.row])!)
+            tableView.insertRows(at: [indexPath], with: .automatic)
+            print("insert")
+        default: print("default")
+        }
+    }
+    
 }
 
 
 // MARK: - UITableViewDelegate
 
 extension TableViewEditing: UITableViewDelegate {
-  
-  
+    // 기본값 true
+//    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        if indexPath.row.isMultiple(of: 2) {
+//            return true
+//        } else {
+//            return false
+//        }
+//    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        // 기본값은 delete
+        let row = indexPath.row
+        if row % 3 == 0 {
+            return .none
+        } else if row % 3 == 1 {
+            return .delete
+        } else {
+            return .insert
+        }
+    }
+    
+    // iOS 8 이상 ~ 10까지 //trailing 에서만 가능
+//    tableviewedit -> 여기서부터 놓침 잘 안씀
+    
+    
+    // iOS 11 이상
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        print("\n----------------------\n")
+        
+        let addAction = UIContextualAction(style: .normal, title: "Add") {
+            (action, sourceView, actionPerformed) in
+            print("Add Action")
+            actionPerformed(true)
+        }
+        addAction.backgroundColor = .blue
+        let deleteAction = UIContextualAction(style: .destructive, title: "delete") {
+            (action, sourceView, actionPerformed) in
+            print("Delete Action")
+            actionPerformed(true)
+        }
+        let configuration = UISwipeActionsConfiguration(actions: [addAction, deleteAction])
+        configuration.performsFirstActionWithFullSwipe = false
+        return configuration
+    }
 }
+
 
