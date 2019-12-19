@@ -23,8 +23,6 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        indexPath.section
-        indexPath.row
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath)
         cell.textLabel?.text = "\(indexPath.row)"
