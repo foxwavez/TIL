@@ -74,6 +74,7 @@ extension TableViewCellStyle: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension TableViewCellStyle: UITableViewDelegate {
+    // 원하는 셀의 크기를 변경 시켜줄 때 사용
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row % 4 == 0 {
             return 120
