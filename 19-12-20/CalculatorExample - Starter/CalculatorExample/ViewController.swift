@@ -29,8 +29,15 @@ final class ViewController: UIViewController {
         let tag = sender.tag
                 if isPerformOperation == true {
                     isPerformOperation = false
-                    resultLabel.text = String(tag - 1)
-                    numberOnScreen = Double(resultLabel.text!)!
+                    var result = tag - 1
+                    
+                    let formatter = NumberFormatter()
+                    formatter.numberStyle = .decimal
+                    formatter.minimumFractionDigits = 0
+                    formatter.maximumFractionDigits = 3
+                    let numString = formatter.string(from: result as NSNumber)
+                    resultLabel.text = numString
+                    numberOnScreen = Double(result)
                 } else {
                     resultLabel.text = resultLabel.text! + String(tag - 1)
                     numberOnScreen = Double(resultLabel.text!)!
