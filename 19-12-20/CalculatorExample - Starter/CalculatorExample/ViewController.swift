@@ -29,7 +29,7 @@ final class ViewController: UIViewController {
         let tag = sender.tag
                 if isPerformOperation == true {
                     isPerformOperation = false
-                    var result = tag - 1
+                    let result = tag - 1
                     
                     let formatter = NumberFormatter()
                     formatter.numberStyle = .decimal
@@ -39,6 +39,7 @@ final class ViewController: UIViewController {
                     resultLabel.text = numString
                     numberOnScreen = Double(result)
                 } else {
+                    
                     resultLabel.text = resultLabel.text! + String(tag - 1)
                     numberOnScreen = Double(resultLabel.text!)!
                 }
