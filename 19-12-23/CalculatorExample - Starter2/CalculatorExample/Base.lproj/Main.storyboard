@@ -150,7 +150,8 @@
                                         <state key="normal" title="="/>
                                         <connections>
                                             <action selector="btnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="Ac8-fw-ckV"/>
-                                            <action selector="operatorBtnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="gbs-Am-okp"/>
+                                            <action selector="equalBtnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="m3T-fR-lEW"/>
+                                            <action selector="operatorBtnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="uwV-kr-7Gs"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOo-nv-Lxc">
@@ -183,6 +184,7 @@
                                         <state key="normal" title="+"/>
                                         <connections>
                                             <action selector="btnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="HnI-BD-Cfv"/>
+                                            <action selector="equalBtnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="ng1-rC-Wdq"/>
                                             <action selector="operatorBtnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="tbx-BS-Ova"/>
                                         </connections>
                                     </button>
