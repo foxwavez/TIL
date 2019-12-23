@@ -29,6 +29,7 @@
                                         <state key="normal" title="0"/>
                                         <connections>
                                             <action selector="btnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="NCN-U4-ZQ0"/>
+                                            <action selector="numberBtnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="IbN-wV-Vh2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2RG-gA-zox" userLabel="Number1">
@@ -39,6 +40,7 @@
                                         <state key="normal" title="1"/>
                                         <connections>
                                             <action selector="btnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="2aY-BP-yGz"/>
+                                            <action selector="numberBtnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="cg5-Fy-GSu"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAX-r8-vRG" userLabel="Number2">
@@ -49,6 +51,7 @@
                                         <state key="normal" title="2"/>
                                         <connections>
                                             <action selector="btnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="s0C-9R-gMW"/>
+                                            <action selector="numberBtnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="nKm-Dd-1US"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lA3-cE-ODk" userLabel="Number3">
@@ -59,6 +62,7 @@
                                         <state key="normal" title="3"/>
                                         <connections>
                                             <action selector="btnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="9E8-du-M3X"/>
+                                            <action selector="numberBtnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="cOw-Bc-yF0"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8J-sz-2T9" userLabel="Number4">
@@ -69,6 +73,7 @@
                                         <state key="normal" title="4"/>
                                         <connections>
                                             <action selector="btnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="ugB-7R-GO7"/>
+                                            <action selector="numberBtnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="th1-nM-YX2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvq-Rj-Qo0" userLabel="Number5">
@@ -79,6 +84,7 @@
                                         <state key="normal" title="5"/>
                                         <connections>
                                             <action selector="btnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="Pbq-Fv-XsZ"/>
+                                            <action selector="numberBtnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="mZz-lr-YIm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJ3-Pp-L66" userLabel="Number6">
@@ -89,6 +95,7 @@
                                         <state key="normal" title="6"/>
                                         <connections>
                                             <action selector="btnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="zTZ-HK-nPL"/>
+                                            <action selector="numberBtnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="1LI-0q-XLS"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEa-Ip-mQD" userLabel="Number7">
@@ -99,6 +106,7 @@
                                         <state key="normal" title="7"/>
                                         <connections>
                                             <action selector="btnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="26k-YR-qp6"/>
+                                            <action selector="numberBtnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="bIT-Ac-WlK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmS-f5-qWv" userLabel="Number8">
@@ -109,6 +117,7 @@
                                         <state key="normal" title="8"/>
                                         <connections>
                                             <action selector="btnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="NbC-Dd-ygh"/>
+                                            <action selector="numberBtnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="dAU-20-8PW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Asx-cF-8Cx" userLabel="Number9">
@@ -119,6 +128,7 @@
                                         <state key="normal" title="9"/>
                                         <connections>
                                             <action selector="btnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="mxK-Jc-HHv"/>
+                                            <action selector="numberBtnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="SSp-Ym-AUD"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdP-Fm-uOu">
@@ -129,6 +139,7 @@
                                         <state key="normal" title="AC"/>
                                         <connections>
                                             <action selector="btnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="fXW-B1-KxQ"/>
+                                            <action selector="resetBtnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="2Bo-85-zd9"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W83-6l-3mG">
@@ -139,6 +150,7 @@
                                         <state key="normal" title="="/>
                                         <connections>
                                             <action selector="btnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="Ac8-fw-ckV"/>
+                                            <action selector="operatorBtnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="gbs-Am-okp"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOo-nv-Lxc">
@@ -149,6 +161,7 @@
                                         <state key="normal" title="×"/>
                                         <connections>
                                             <action selector="btnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="Nic-1b-MDS"/>
+                                            <action selector="operatorBtnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="dwW-qk-Ttt"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9X-nL-V9A">
@@ -159,6 +172,7 @@
                                         <state key="normal" title="-"/>
                                         <connections>
                                             <action selector="btnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="FZQ-2h-wxB"/>
+                                            <action selector="operatorBtnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="N9O-Hi-pIi"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqf-hD-aZ0">
@@ -169,6 +183,7 @@
                                         <state key="normal" title="+"/>
                                         <connections>
                                             <action selector="btnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="HnI-BD-Cfv"/>
+                                            <action selector="operatorBtnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="tbx-BS-Ova"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NcZ-RC-cCR">
@@ -179,6 +194,7 @@
                                         <state key="normal" title="÷"/>
                                         <connections>
                                             <action selector="btnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="ast-nn-y83"/>
+                                            <action selector="operatorBtnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="wIN-4f-Sc2"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -290,23 +306,23 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="btnDevide" destination="NcZ-RC-cCR" id="N7r-rW-b3o"/>
-                        <outlet property="btnEight" destination="UmS-f5-qWv" id="RsA-KO-K4B"/>
-                        <outlet property="btnEqual" destination="W83-6l-3mG" id="RAX-KM-d2C"/>
-                        <outlet property="btnFive" destination="Lvq-Rj-Qo0" id="YWH-5o-fq3"/>
-                        <outlet property="btnFour" destination="m8J-sz-2T9" id="1z6-42-6yB"/>
-                        <outlet property="btnMinus" destination="Z9X-nL-V9A" id="RLp-LY-2n8"/>
-                        <outlet property="btnMultiply" destination="hOo-nv-Lxc" id="S5L-Py-O2T"/>
-                        <outlet property="btnNine" destination="Asx-cF-8Cx" id="CYS-sF-l5y"/>
-                        <outlet property="btnOne" destination="2RG-gA-zox" id="V5I-Be-2kM"/>
-                        <outlet property="btnPlus" destination="Vqf-hD-aZ0" id="lD9-CQ-2Sz"/>
-                        <outlet property="btnReset" destination="rdP-Fm-uOu" id="RSg-U1-nOR"/>
-                        <outlet property="btnSeven" destination="aEa-Ip-mQD" id="XUp-Op-J3z"/>
-                        <outlet property="btnSix" destination="jJ3-Pp-L66" id="q3q-wC-gMm"/>
-                        <outlet property="btnThree" destination="lA3-cE-ODk" id="3fI-qL-TjY"/>
-                        <outlet property="btnTwo" destination="AAX-r8-vRG" id="ezo-mn-5ff"/>
-                        <outlet property="btnZero" destination="NrR-XQ-a6S" id="GJM-G3-aTJ"/>
+                        <outlet property="devideBtn" destination="NcZ-RC-cCR" id="N7r-rW-b3o"/>
                         <outlet property="displayLabel" destination="1Yl-R6-zrV" id="NRD-TA-PpP"/>
+                        <outlet property="eightBtn" destination="UmS-f5-qWv" id="RsA-KO-K4B"/>
+                        <outlet property="equalBtn" destination="W83-6l-3mG" id="RAX-KM-d2C"/>
+                        <outlet property="fiveBtn" destination="Lvq-Rj-Qo0" id="YWH-5o-fq3"/>
+                        <outlet property="fourBtn" destination="m8J-sz-2T9" id="1z6-42-6yB"/>
+                        <outlet property="minusBtn" destination="Z9X-nL-V9A" id="RLp-LY-2n8"/>
+                        <outlet property="multiplyBtn" destination="hOo-nv-Lxc" id="S5L-Py-O2T"/>
+                        <outlet property="nineBtn" destination="Asx-cF-8Cx" id="CYS-sF-l5y"/>
+                        <outlet property="oneBtn" destination="2RG-gA-zox" id="V5I-Be-2kM"/>
+                        <outlet property="plusBtn" destination="Vqf-hD-aZ0" id="lD9-CQ-2Sz"/>
+                        <outlet property="resetBtn" destination="rdP-Fm-uOu" id="RSg-U1-nOR"/>
+                        <outlet property="sevenBtn" destination="aEa-Ip-mQD" id="XUp-Op-J3z"/>
+                        <outlet property="sixBtn" destination="jJ3-Pp-L66" id="q3q-wC-gMm"/>
+                        <outlet property="threeBtn" destination="lA3-cE-ODk" id="3fI-qL-TjY"/>
+                        <outlet property="twoBtn" destination="AAX-r8-vRG" id="ezo-mn-5ff"/>
+                        <outlet property="zeroBtn" destination="NrR-XQ-a6S" id="GJM-G3-aTJ"/>
                         <outletCollection property="buttons" destination="2RG-gA-zox" collectionClass="NSMutableArray" id="rvI-Ba-H7d"/>
                         <outletCollection property="buttons" destination="AAX-r8-vRG" collectionClass="NSMutableArray" id="a6Z-D4-C2q"/>
                         <outletCollection property="buttons" destination="lA3-cE-ODk" collectionClass="NSMutableArray" id="8bZ-BS-V6E"/>

@@ -16,25 +16,25 @@ final class ViewController: UIViewController {
     
     @IBOutlet weak var displayLabel: UILabel!
     
-    @IBOutlet weak var btnZero: UIButton!
-    @IBOutlet weak var btnOne: UIButton!
-    @IBOutlet weak var btnTwo: UIButton!
-    @IBOutlet weak var btnThree: UIButton!
-    @IBOutlet weak var btnFour: UIButton!
-    @IBOutlet weak var btnFive: UIButton!
-    @IBOutlet weak var btnSix: UIButton!
-    @IBOutlet weak var btnSeven: UIButton!
-    @IBOutlet weak var btnEight: UIButton!
-    @IBOutlet weak var btnNine: UIButton!
+    @IBOutlet weak var zeroBtn: UIButton!
+    @IBOutlet weak var oneBtn: UIButton!
+    @IBOutlet weak var twoBtn: UIButton!
+    @IBOutlet weak var threeBtn: UIButton!
+    @IBOutlet weak var fourBtn: UIButton!
+    @IBOutlet weak var fiveBtn: UIButton!
+    @IBOutlet weak var sixBtn: UIButton!
+    @IBOutlet weak var sevenBtn: UIButton!
+    @IBOutlet weak var eightBtn: UIButton!
+    @IBOutlet weak var nineBtn: UIButton!
     
-    @IBOutlet weak var btnPlus: UIButton!
-    @IBOutlet weak var btnMinus: UIButton!
-    @IBOutlet weak var btnMultiply: UIButton!
-    @IBOutlet weak var btnDevide: UIButton!
-    @IBOutlet weak var btnEqual: UIButton!
-    @IBOutlet weak var btnReset: UIButton!
+    @IBOutlet weak var plusBtn: UIButton!
+    @IBOutlet weak var minusBtn: UIButton!
+    @IBOutlet weak var multiplyBtn: UIButton!
+    @IBOutlet weak var devideBtn: UIButton!
+    @IBOutlet weak var equalBtn: UIButton!
+    @IBOutlet weak var resetBtn: UIButton!
     
-    
+    private var displayValue: String = ""
     
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -44,8 +44,8 @@ final class ViewController: UIViewController {
     
     private func setupUI() {
         for btn in buttons{
-//            btnOne.frame
-            btn.layer.cornerRadius = 45.5
+            btn.layer.cornerRadius = oneBtn.frame.height / 2 + 4
+//            btn.layer.cornerRadius = 45.5
         }
     }
     
@@ -57,7 +57,23 @@ final class ViewController: UIViewController {
         }
     }
     
+    @IBAction func numberBtnAction(_ sender: UIButton) {
+
+        guard let identifier = sender.accessibilityIdentifier else { return }
+        guard let number = Double(identifier) else { return }
+        
+        
+        print(number)
+        displayLabel.text = "\(number)"
+    }
     
+    @IBAction func operatorBtnAction(_ sender: UIButton) {
+    
+    
+    }
+    
+    @IBAction func resetBtnAction(_ sender: UIButton) {
+    }
     
 }
 
