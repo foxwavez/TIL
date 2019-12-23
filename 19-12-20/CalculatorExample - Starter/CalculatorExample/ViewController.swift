@@ -11,6 +11,7 @@ import UIKit
 final class ViewController: UIViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
+    private var resultDisplay: String = ""
     
     var numberOnScreen: Double = 0 //
     var previousNumber: Double = 0 //
@@ -19,33 +20,35 @@ final class ViewController: UIViewController {
     
     
     
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    resultLabel.text = ""
-    
-  }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        resultLabel.text = resultDisplay
+        
+    }
     
     @IBAction func numberAction(_ sender: UIButton) {
         let tag = sender.tag
-                if isPerformOperation == true {
-                    isPerformOperation = false
-                    let result = tag - 1
-                    
-                    let formatter = NumberFormatter()
-                    formatter.numberStyle = .decimal
-                    formatter.minimumFractionDigits = 0
-                    formatter.maximumFractionDigits = 3
-                    let numString = formatter.string(from: result as NSNumber)
-                    resultLabel.text = numString
-                    numberOnScreen = Double(result)
-                } else {
-                    
-                    resultLabel.text = resultLabel.text! + String(tag - 1)
-                    numberOnScreen = Double(resultLabel.text!)!
-                }
+        
+        if isPerformOperation == true {
+            isPerformOperation = false
+            resultDisplay = String(tag)
+            numberOnScreen = Double(resultDisplay)!
+        } else {
+            resultDisplay = resultDisplay + String(tag)
+            numberOnScreen = Double(resultDisplay)!
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .decimal
+            formatter.minimumFractionDigits = 0
+            formatter.maximumFractionDigits = 3
+            let numberOnScreenString = formatter.string(from: numberOnScreen as NSNumber)
+            resultLabel.text = numberOnScreenString ?? ""
+            
+            
+//            resultLabel.text = numberOnScreenString
+        }
         //        resultLabel.text = resultLabel.text! + String(tag - 1)
-
-
+        
+        
     }
     
     @IBAction func operatorAction(_ sender: UIButton) {
@@ -53,7 +56,7 @@ final class ViewController: UIViewController {
         let tag = sender.tag
         //  AC 버튼
         if tag == 11 {
-            resultLabel.text = "0"
+            resultDisplay = "0"
             previousNumber = 0
             numberOnScreen = 0
             operation = 0
@@ -68,7 +71,7 @@ final class ViewController: UIViewController {
             let numString = formatter.string(from: numberOnScreen as NSNumber)
             print(numString!)
             
-            previousNumber = Double(resultLabel.text ?? "")!
+            previousNumber = Double(resultDisplay)!
             operation = tag
             isPerformOperation = true
             resultLabel.text = String(numString!)
@@ -99,6 +102,6 @@ final class ViewController: UIViewController {
         }
         
     }
-    }
+}
 
 
