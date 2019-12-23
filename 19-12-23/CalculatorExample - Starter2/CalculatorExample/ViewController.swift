@@ -10,6 +10,10 @@ import UIKit
 
 final class ViewController: UIViewController {
 
+    @IBOutlet var buttons: [UIButton]!
+    @IBOutlet var numberBtns: [UIButton]!
+    @IBOutlet var operatorBtns: [UIButton]!
+    
     @IBOutlet weak var displayLabel: UILabel!
     
     @IBOutlet weak var btnZero: UIButton!
@@ -39,8 +43,7 @@ final class ViewController: UIViewController {
     
     
     private func setupUI() {
-        var btnArr: [UIButton] = [btnZero, btnOne, btnTwo, btnThree, btnFour,btnFive, btnSix, btnSeven, btnEight, btnNine, btnPlus, btnMinus, btnMultiply, btnDevide, btnDevide, btnEqual, btnReset]
-        for btn in btnArr {
+        for btn in buttons{
 //            btnOne.frame
             btn.layer.cornerRadius = 45.5
         }
