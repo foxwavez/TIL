@@ -69,6 +69,7 @@ final class ViewController: UIViewController {
     var isPerformOperation = false
     var isPerformPlus = false
     var isPerformMinus = false
+    var identifier: String = ""
     
     @IBAction func numberBtnAction(_ sender: UIButton) {
         
@@ -92,56 +93,88 @@ final class ViewController: UIViewController {
     @IBAction func operatorBtnAction(_ sender: UIButton) {
         guard let identifier = sender.accessibilityIdentifier else { return }
         isPerformOperation = true
+       
         switch identifier {
         case "plus":
             print("plus - \(Double(displayText)!), \(displayValue)")
             beforeValue = displayValue
-            isPerformPlus = true
+            self.identifier = "plus"
         case "minus":
-            print("plus - \(Double(displayText)!), \(displayValue)")
+            print("minus - \(Double(displayText)!), \(displayValue)")
             beforeValue = displayValue
-            isPerformMinus = true
+            self.identifier = "minus"
+        case "multiply":
+            print("multiply - \(Double(displayText)!), \(displayValue)")
+            beforeValue = displayValue
+            self.identifier = "multiply"
+        case "devide":
+            print("devide - \(Double(displayText)!), \(displayValue)")
+            beforeValue = displayValue
+            self.identifier = "devide"
         default:
             break
         }
         
-//        switch identifier {
-//        case "equal":
-//            let plusValue = Double(displayText)! + beforeValue
-//            print("equal")
-//            operatorValue = plusValue
-//            displayLabel.text = formatter(number: plusValue)
-//        default:
-//            break
-//        }
+        
+
         
     }
     
     @IBAction func equalBtnAction(_ sender: UIButton) {
         guard let identifier = sender.accessibilityIdentifier else { return }
-        if identifier == "equal" {
-            if isPerformPlus == true {
-                let plusValue = beforeValue + Double(displayText)!
-                print("equal - \(beforeValue), \(Double(displayText)!)")
-                operatorValue = plusValue
-                displayLabel.text = formatter(number: plusValue)
-                isPerformPlus = false
-            } else if isPerformPlus == false {
-                operatorValue = operatorValue + Double(displayText)!
-                displayLabel.text = formatter(number: operatorValue)
-                isPerformPlus = false
-            }
-//            if isPerformMinus == true {
+        isPerformOperation = true
+//        if identifier == "equal" {
+//            switch isPerformPlus {
+//            case true:
+//                let plusValue = beforeValue + Double(displayText)!
+//                print("equal - \(beforeValue), \(Double(displayText)!)")
+//                operatorValue = plusValue
+//                displayLabel.text = formatter(number: plusValue)
+//                isPerformPlus = false
+//            default:
+//                operatorValue = operatorValue + Double(displayText)!
+//                displayLabel.text = formatter(number: operatorValue)
+//                isPerformPlus = false
+//            }
+//            switch isPerformMinus {
+//            case true:
 //                let minusValue = beforeValue - Double(displayText)!
 //                print("equal - \(beforeValue), \(Double(displayText)!)")
 //                operatorValue = minusValue
 //                displayLabel.text = formatter(number: minusValue)
 //                isPerformMinus = false
-//            } else if isPerformMinus == false {
+//            default:
 //                operatorValue = operatorValue - Double(displayText)!
 //                displayLabel.text = formatter(number: operatorValue)
 //                isPerformMinus = false
 //            }
+        if identifier == "equal" {
+            switch self.identifier {
+            case "plus":
+                let plusValue = beforeValue + Double(displayText)!
+                operatorValue = plusValue
+                displayLabel.text = formatter(number: plusValue)
+            case "minus":
+                let minusValue = beforeValue - Double(displayText)!
+                print("equal - \(beforeValue), \(Double(displayText)!)")
+                operatorValue = minusValue
+                displayLabel.text = formatter(number: minusValue)
+                isPerformMinus = false
+            case "multiply":
+            let multiplyValue = beforeValue * Double(displayText)!
+            print("equal - \(beforeValue), \(Double(displayText)!)")
+            operatorValue = multiplyValue
+            displayLabel.text = formatter(number: multiplyValue)
+            isPerformMinus = false
+            case "devide":
+            let devideValue = beforeValue / Double(displayText)!
+            print("equal - \(beforeValue), \(Double(displayText)!)")
+            operatorValue = devideValue
+            displayLabel.text = formatter(number: devideValue)
+            isPerformMinus = false
+            default:
+                print("")
+            }
         }
     }
     

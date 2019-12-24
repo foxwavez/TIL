@@ -184,7 +184,6 @@
                                         <state key="normal" title="+"/>
                                         <connections>
                                             <action selector="btnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="HnI-BD-Cfv"/>
-                                            <action selector="equalBtnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="ng1-rC-Wdq"/>
                                             <action selector="operatorBtnAction:" destination="pbn-JH-sGP" eventType="touchUpInside" id="tbx-BS-Ova"/>
                                         </connections>
                                     </button>
