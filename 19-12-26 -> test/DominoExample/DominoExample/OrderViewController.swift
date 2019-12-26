@@ -9,30 +9,31 @@
 import UIKit
 
 class OrderViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         setupUI()
     }
+    
+    
     // MARK: - TableView Data
     
     
-    
-    let datas: [String: [Menu]] = [
-        "슈퍼 시드 함유 도우": [
-            Menu(name: "글림핑 바베큐", price: 35_900, thumbnail: DominoImage.hotPizza),
-            Menu(name: "알로하 하와이안", price: 25_900, thumbnail: DominoImage.meatPizza),
-            Menu(name: "우리 고구마", price: 35_900, thumbnail: DominoImage.shirimpPizza),
-            Menu(name: "콰트로 치즈퐁듀", price: 35_900, thumbnail: DominoImage.whitePizza)
-        ],
-        "프리미엄": [],
-        "클래식": [],
-        "사이드 디스": [],
-        "음료":[]
+    let datas: [DominoMenu] = [
+        DominoMenu(category: "슈퍼 시드 함유 도우",
+                   menus: [
+                    Menu(name: "글램핑 바비큐", price: 35_900, thumbnail: DominoImage.hotPizza),
+                    Menu(name: "알로하 하와이안", price: 31_900, thumbnail: DominoImage.whitePizza),
+                    Menu(name: "우리 고구마", price: 31_900, thumbnail: DominoImage.shirimpPizza),
+                    Menu(name: "콰트로 치즈 퐁듀", price: 25_900, thumbnail: DominoImage.meatPizza),
+        ]), // 0번째 cell의 데이터가 menuInfo로 들어간다고 생각하면 된다
+        DominoMenu(category: "프리미엄", menus: []),
+        DominoMenu(category: "클래식", menus: []),
+        DominoMenu(category: "사이드디스", menus: []),
+        DominoMenu(category: "음료", menus: [])
     ]
-
     
     let imageView = UIImageView()
     let tableView = UITableView()
@@ -40,9 +41,6 @@ class OrderViewController: UIViewController {
     // 1)
     private func setupUI() {
         self.view.backgroundColor = .white
-        for data in datas {
-            
-        }
         
         self.navigationItem.title = "Domino's"
         
@@ -80,7 +78,7 @@ class OrderViewController: UIViewController {
 
 // MARK: - UITableViewDataSource
 
-            // 작업해줄 컨트롤러
+// 작업해줄 컨트롤러
 extension OrderViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return datas.count // 여기 수정
@@ -88,8 +86,11 @@ extension OrderViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoyCell", for: indexPath)
-        cell.textLabel?.text = datas[indexPath.row] // 여기 수정
+        let data = datas[indexPath.row]
+        cell.textLabel?.text = data.category
+//        cell.textLabel?.text = datas[indexPath.row] // 여기 수정
         // indexPath -> 테이블 뷰에서 로우들의 인덱스
+        // struct를 따로 Menu에 만들어주었기 때문에 위처럼 수정해줘야 ㅇ한다
         cell.contentView.backgroundColor = UIColor(patternImage: UIImage(named: DominoImage.logo)!) // 여기 수정 / 그런데 이거는 완전한 게 아니므로 유의
         return cell
     }
@@ -107,7 +108,9 @@ extension OrderViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 터치했을 때 실행하는 함수라서 didSelectRowAt
         let menuListVC = MainListController()
-        menuListVC.menuTitle = datas[indexPath.row]
+        menuListVC.menuInfo = datas[indexPath.row]
+//        menuListVC.menuTitle = datas[indexPath.row]
+        //
         self.navigationController?.pushViewController(menuListVC, animated: true)
         //pushViewController는 네비게이션바에서 관리하고 로우를 누르면 다른 뷰가 나오게 해주는 역할
     }

@@ -17,6 +17,7 @@
 		70F1D1B623B4D4B900A304C8 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F1D1B523B4D4B900A304C8 /* Common.swift */; };
 		70F1D1B823B4E3AE00A304C8 /* MainListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F1D1B723B4E3AE00A304C8 /* MainListController.swift */; };
 		70F1D1BA23B4E9E600A304C8 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F1D1B923B4E9E600A304C8 /* Menu.swift */; };
+		70F1D1BC23B4FD2400A304C8 /* DetailMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F1D1BB23B4FD2400A304C8 /* DetailMenuController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		70F1D1B523B4D4B900A304C8 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		70F1D1B723B4E3AE00A304C8 /* MainListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListController.swift; sourceTree = "<group>"; };
 		70F1D1B923B4E9E600A304C8 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		70F1D1BB23B4FD2400A304C8 /* DetailMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMenuController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				70F1D1A323B4B92D00A304C8 /* OrderViewController.swift */,
 				70F1D1B923B4E9E600A304C8 /* Menu.swift */,
 				70F1D1B723B4E3AE00A304C8 /* MainListController.swift */,
+				70F1D1BB23B4FD2400A304C8 /* DetailMenuController.swift */,
 				70F1D1B523B4D4B900A304C8 /* Common.swift */,
 				70F1D1A523B4B92D00A304C8 /* Main.storyboard */,
 				70F1D1A823B4B92F00A304C8 /* Assets.xcassets */,
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70F1D1A423B4B92D00A304C8 /* OrderViewController.swift in Sources */,
+				70F1D1BC23B4FD2400A304C8 /* DetailMenuController.swift in Sources */,
 				70F1D1A023B4B92D00A304C8 /* AppDelegate.swift in Sources */,
 				70F1D1BA23B4E9E600A304C8 /* Menu.swift in Sources */,
 				70F1D1B823B4E3AE00A304C8 /* MainListController.swift in Sources */,
