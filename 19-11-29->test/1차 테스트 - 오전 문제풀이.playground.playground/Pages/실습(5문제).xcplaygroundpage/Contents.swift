@@ -60,7 +60,7 @@ print("\n---------- [ LeafYear ] ----------\n")
 func printTheNumberOfLeafYear(_ year: Int) {
   var count = 0
   for i in 1...year {
-    let isLeafYear = i % 4 == 0 && (i % 100 != 0 || i % 400 == 0)
+    let isLeafYear = i % 4 == 0 && (i  % 100 != 0 || i % 400 == 0)
     count += isLeafYear ? 1 : 0
   }
   print("윤년에 속하는 해는 총 \(count)회입니다.")

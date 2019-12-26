@@ -162,16 +162,16 @@ final class ViewController: UIViewController {
                 isPerformMinus = false
             case "multiply":
             let multiplyValue = beforeValue * Double(displayText)!
-            print("equal - \(beforeValue), \(Double(displayText)!)")
-            operatorValue = multiplyValue
-            displayLabel.text = formatter(number: multiplyValue)
-            isPerformMinus = false
+                print("equal - \(beforeValue), \(Double(displayText)!)")
+                operatorValue = multiplyValue
+                displayLabel.text = formatter(number: multiplyValue)
+                isPerformMinus = false
             case "devide":
             let devideValue = beforeValue / Double(displayText)!
-            print("equal - \(beforeValue), \(Double(displayText)!)")
-            operatorValue = devideValue
-            displayLabel.text = formatter(number: devideValue)
-            isPerformMinus = false
+                print("equal - \(beforeValue), \(Double(displayText)!)")
+                operatorValue = devideValue
+                displayLabel.text = formatter(number: devideValue)
+                isPerformMinus = false
             default:
                 print("")
             }
