@@ -32,7 +32,7 @@ class ListViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "categoryCell")
+//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "categoryCell")
         self.view.addSubview(tableView)
         
         setupConstraint()
@@ -65,26 +65,25 @@ extension ListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //        let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath)
+        
         let cell: UITableViewCell
         if let categoryCell = tableView.dequeueReusableCell(withIdentifier: "categoryCell") {
             cell = categoryCell
         } else {
             cell = UITableViewCell(style: .subtitle, reuseIdentifier: "categoryCell")
         }
-        
+
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath)
 //        let data = menuInfo?.products[indexPath.row]
+        let data = menuData[indexPath.section].products[indexPath.row]
         
-        cell.textLabel?.text = menuData[indexPath.section].products[indexPath.row].name
-        cell.imageView?.image = UIImage(named: menuData[indexPath.section].products[indexPath.row].image)
-        cell.detailTextLabel?.text = "\(menuData[indexPath.section].products[indexPath.row].price)원"
+        cell.textLabel?.text = data.name
+        cell.imageView?.image = UIImage(named: data.image)
+        cell.detailTextLabel?.text = "\(data.price)원"
+        cell.selectionStyle = .none
 //        cell.textLabel?.text = data?.name ?? ""
 //        cell.imageView?.image = UIImage(named: data?.image ?? "")
 //        cell.detailTextLabel?.text = "\(data?.price ?? 0)원"
-        
-        //        cell.textLabel?.text = "나오나 안나오나 확인 해보자"
-        //        cell.imageView?.image = UIImage(named: "핫소스")
-        //        cell.detailTextLabel?.text = "\(10000000)원"
         
         return cell
         
