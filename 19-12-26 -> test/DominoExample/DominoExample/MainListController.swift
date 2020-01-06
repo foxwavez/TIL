@@ -28,6 +28,9 @@ class MainListController: UIViewController {
         self.tableView.rowHeight = 120
 //        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MenuCell")
         self.view.addSubview(tableView)
+        
+        tableView.delegate = self
+        tableView.dataSource = self
         self.setupConstraint()
         
     }

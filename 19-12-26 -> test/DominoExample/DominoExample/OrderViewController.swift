@@ -51,7 +51,7 @@ class OrderViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CategoyCell")
-        // dequeueReusableCell로 셀을 재사용하는 것이기 때문에 UITableViewCell.self
+        // dequeueReusanbleCell로 셀을 재사용하는 것이기 때문에 UITableViewCell.self
         self.view.addSubview(tableView)
         
         setupConstraint() // setupUI 안에서 위치를 잡아주는거기 때문에 함수를 호출해줘야 한다
@@ -90,7 +90,7 @@ extension OrderViewController: UITableViewDataSource {
         cell.textLabel?.text = data.category
 //        cell.textLabel?.text = datas[indexPath.row] // 여기 수정
         // indexPath -> 테이블 뷰에서 로우들의 인덱스
-        // struct를 따로 Menu에 만들어주었기 때문에 위처럼 수정해줘야 ㅇ한다
+        // struct를 따로 Menu에 만들어주었기 때문에 위처럼 수정해줘야 한다
         cell.contentView.backgroundColor = UIColor(patternImage: UIImage(named: DominoImage.logo)!) // 여기 수정 / 그런데 이거는 완전한 게 아니므로 유의
         return cell
     }
