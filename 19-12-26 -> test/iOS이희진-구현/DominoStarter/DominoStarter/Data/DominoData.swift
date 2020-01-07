@@ -27,8 +27,8 @@ struct Section {
 
 //  데이터 예시
 
-let sextionData: [Section] = [
-    Section(name: "슈퍼시드 함유 도우"),
+let sectionData: [Section] = [
+    Section(name: "슈퍼시드"),
     Section(name: "프리미엄"),
     Section(name: "클래식"),
     Section(name: "사이드 디시"),

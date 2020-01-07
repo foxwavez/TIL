@@ -64,21 +64,20 @@ extension ListViewController: UITableViewDataSource {
         
     }
     
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//
-//        return String(sextionData[section].name)
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+
+        return String(sectionData[section].name)
+    }
+    
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let sectionDataName = sectionData[section].name
+//        let myCustomView = UIImageView()
+//        let myImage = UIImage(named: sectionDataName)
+//        myCustomView.image = myImage
+//    
+//        return myCustomView
 //    }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> UIView? {
-//        let sectionData = sextionData[section]
-//        let myCustomView: UIImageView
-//        let myImage: UIImage = (UIImage(named: String(sectionData.name))
-//        myCustomView.image = myImage
-
-        let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
-        header.addSubview(myCustomView)
-        return header
-    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -108,6 +107,17 @@ extension ListViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension ListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let sectionDataName = sectionData[section].name
+        let myCustomView = UIImageView()
+        let myImage = UIImage(named: sectionDataName)
+        myCustomView.image = myImage
+
+        return myCustomView
+
+    }
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = DetailViewController()
         self.navigationController?.pushViewController(detailVC, animated: true)
