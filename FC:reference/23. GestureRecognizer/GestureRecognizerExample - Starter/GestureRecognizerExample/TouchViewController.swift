@@ -53,13 +53,16 @@ final class TouchViewController: UIViewController {
 //        }
         let prevTouchPoint = touch.previousLocation(in: touch.view)
         
+        
         if imageView.frame.contains(touchPoint) {
             let dx = touchPoint.x - prevTouchPoint.x
             let dy = touchPoint.y - prevTouchPoint.y
-            
+            // dx, dy는 전에 눌렀던 이미지뷰의 터치 중심점과 움직인 순간 눌러진 이미지뷰의 터치 중심 사이의 거리를 뜻한다.
             imageView.center.x = imageView.center.x + dx
             imageView.center.y = imageView.center.y + dy
+            // 이미지뷰의 센터 x, y에 dx, dy(움직인 거리)를 더해줘서 손가락이 움직이는 거리만큼 이미지 뷰도 같이 움직이는 거다
         }
+        
         print("\n---------[touchesMoved]--------\n")
     }
     
