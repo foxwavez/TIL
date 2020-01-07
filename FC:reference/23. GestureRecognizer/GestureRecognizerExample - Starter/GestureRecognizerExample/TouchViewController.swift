@@ -47,15 +47,19 @@ final class TouchViewController: UIViewController {
         guard let touch = touches.first else { return }
         let touchPoint = touch.location(in: touch.view)
         
-        if imageView.frame.contains(touchPoint) {
-            imageView.center = touchPoint
-            // 이미지의 중심점을 내가 터치한 위치로 계속 업데이트 한다
-        }
-//        let prevTouchPoint = touch.previousLocation(in: touch.view)
-    // *****이미지 중심점 말고 내가 터치한 위치에서 이동하게 해야 한다*****
-        imageView.center = touchPoint
-
+//        if imageView.frame.contains(touchPoint) {
+//            imageView.center = touchPoint
+//            // 이미지의 중심점을 내가 터치한 위치로 계속 업데이트 한다
+//        }
+        let prevTouchPoint = touch.previousLocation(in: touch.view)
         
+        if imageView.frame.contains(touchPoint) {
+            let dx = touchPoint.x - prevTouchPoint.x
+            let dy = touchPoint.y - prevTouchPoint.y
+            
+            imageView.center.x = imageView.center.x + dx
+            imageView.center.y = imageView.center.y + dy
+        }
         print("\n---------[touchesMoved]--------\n")
     }
     
