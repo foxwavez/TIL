@@ -31,7 +31,7 @@ let sectionData: [Section] = [
     Section(name: "슈퍼시드"),
     Section(name: "프리미엄"),
     Section(name: "클래식"),
-    Section(name: "사이드 디시"),
+    Section(name: "사이드디시"),
     Section(name: "음료"),
     Section(name: "피클소스")
 ]

@@ -10,8 +10,6 @@ import UIKit
 
 class ListViewController: UIViewController {
     
-//    var menuInfo: Menu?
-//    var productInfo: Product?
     
     let tableView = UITableView()
     let imageView = UIImageView()
@@ -28,7 +26,8 @@ class ListViewController: UIViewController {
         self.view.backgroundColor = .white
         
         self.navigationItem.title = "Domino's"
-        self.tableView.rowHeight = 100
+        self.tableView.rowHeight = 120
+        self.tableView.sectionHeaderHeight = 80
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -57,9 +56,7 @@ extension ListViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int { menuData.count }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return productInfo?.name.count ?? 0
-        // menuInfo?.products.count ?? 0
-        
+ 
         return menuData[section].products.count
         
     }
@@ -68,16 +65,6 @@ extension ListViewController: UITableViewDataSource {
 
         return String(sectionData[section].name)
     }
-    
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let sectionDataName = sectionData[section].name
-//        let myCustomView = UIImageView()
-//        let myImage = UIImage(named: sectionDataName)
-//        myCustomView.image = myImage
-//
-//        return myCustomView
-//    }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -120,6 +107,10 @@ extension ListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = DetailViewController()
+        let data = menuData[indexPath.section].products[indexPath.row]
+        detailVC.title = data.name
+        detailVC.imageView.image = UIImage(named: data.image)
+        
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }
