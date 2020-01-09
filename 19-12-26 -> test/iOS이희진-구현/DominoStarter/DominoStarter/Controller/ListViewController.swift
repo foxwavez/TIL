@@ -74,7 +74,7 @@ extension ListViewController: UITableViewDataSource {
 //        let myCustomView = UIImageView()
 //        let myImage = UIImage(named: sectionDataName)
 //        myCustomView.image = myImage
-//    
+//
 //        return myCustomView
 //    }
     
