@@ -27,11 +27,15 @@ class ViewController: UIViewController {
         myHome.coordinate = CLLocationCoordinate2DMake(37.53691740, 127.07781270)
         mapView.addAnnotation(myHome)
         
-        var point1 = myHome.coordinate; point1.latitude += 0.02
-        var point2 = myHome.coordinate; point2.longitude += 0.04;   point2.latitude -= 0.015
-        var point3 = myHome.coordinate; point3.longitude -= 0.04;  point3.latitude += 0.015
-//        var point4 = myHome.coordinate; point4.longitude += 0.045;  point4.latitude += 0.04
-//        var point5 = myHome.coordinate; point5.longitude -= 0.04;   point5.latitude -= 0.015
+        // 위도(latitude)는 위로 가려면 + 아래로 가려면 - 값을 넣으면 된다
+        // 경도(longtitude)는 오른쪽으로 가려면 + 왼쪽으로 가려면 - 값을 넣으면 된다.
+        var point1 = myHome.coordinate; point1.latitude += 0.06
+        // pin(annptation)된 집주소 위치에서 삼각형의 정가운데 위도 위로 0.06 만큼 거리에 점을 찍는다
+        var point2 = myHome.coordinate; point2.longitude -= 0.065;   point2.latitude -= 0.04
+        // 집주소 위치에서 위도 아래로 -0.065 만큼, 경도  -0.04. 만큼 거리(여기서 말하는 거리는 대각선)에 점을 찍는다.
+        // point1점과 point2점이 연결되서 빨간 선으로 나오는 것
+        var point3 = myHome.coordinate; point3.longitude += 0.065;  point3.latitude -= 0.04
+        // point1점과 point2점, point3. 3개의 점이 빨간 선으로 연결되서 삼각형이 나오게 된다
         let points: [CLLocationCoordinate2D] = [point1, point2, point3, point1]
         let polyline = MKPolyline(coordinates: points, count: points.count)
         mapView.addOverlay(polyline)
