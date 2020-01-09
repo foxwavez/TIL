@@ -11,8 +11,8 @@ import UIKit
 class DetailViewController: UIViewController {
   
     let imageView = UIImageView()
-    let plusBtn = UIButton()
-    let minusBtn = UIButton()
+    var plusBtn = UIButton()
+    var minusBtn = UIButton()
     let displayLable = UILabel()
    
 
@@ -24,23 +24,21 @@ class DetailViewController: UIViewController {
     
     private func setupUI() {
         view.backgroundColor = .white
-        [imageView, plusBtn, minusBtn, displayLable].forEach {
-            view.addSubview($0)
-        }
         
-        
-        plusBtn.setTitle("+", for: .normal)
-        plusBtn.layer.borderColor = UIColor.darkGray.cgColor
-        plusBtn.layer.borderWidth = 2
-        plusBtn.titleLabel?.font = UIFont.systemFont(ofSize: 24)
-        plusBtn.setTitleColor(.darkGray, for: .normal)
+        plusBtn = self.btnStyle(title: "+")
+//        plusBtn.setTitle("+", for: .normal)
+//        plusBtn.layer.borderColor = UIColor.darkGray.cgColor
+//        plusBtn.layer.borderWidth = 2
+//        plusBtn.titleLabel?.font = UIFont.systemFont(ofSize: 24)
+//        plusBtn.setTitleColor(.darkGray, for: .normal)
 //        self.view.addSubview(plusBtn)
 
-        minusBtn.setTitle("-", for: .normal)
-        minusBtn.layer.borderColor = UIColor.darkGray.cgColor
-        minusBtn.layer.borderWidth = 2
-        minusBtn.titleLabel?.font = UIFont.systemFont(ofSize: 24)
-        minusBtn.setTitleColor(.darkGray, for: .normal)
+        minusBtn = self.btnStyle(title: "-")
+//        minusBtn.setTitle("-", for: .normal)
+//        minusBtn.layer.borderColor = UIColor.darkGray.cgColor
+//        minusBtn.layer.borderWidth = 2
+//        minusBtn.titleLabel?.font = UIFont.systemFont(ofSize: 24)
+//        minusBtn.setTitleColor(.darkGray, for: .normal)
 //        self.view.addSubview(minusBtn)
         
         displayLable.text = "\(0)개"
@@ -49,6 +47,10 @@ class DetailViewController: UIViewController {
         displayLable.backgroundColor = .darkGray
 //        self.view.addSubview(displayLable)
 //        plusBtn.addTarget(self, action: #selector(btnAction), for: .touchUpInside)
+        
+        [imageView, plusBtn, minusBtn, displayLable].forEach {
+                   view.addSubview($0)
+               }
     }
     
     private func setupConstraint() {
@@ -85,7 +87,16 @@ class DetailViewController: UIViewController {
         ])
     }
     
-   
+   private func btnStyle(title: String) -> UIButton {
+          let button = UIButton()
+          button.layer.borderColor = UIColor.darkGray.cgColor
+          button.layer.borderWidth = 2
+          button.titleLabel?.font = UIFont.systemFont(ofSize: 24)
+          button.setTitleColor(.darkGray, for: .normal)
+          button.setTitle(title, for: .normal)
+          
+          return button
+      }
     
 }
 
