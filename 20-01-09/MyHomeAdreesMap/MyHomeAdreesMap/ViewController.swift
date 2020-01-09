@@ -32,9 +32,10 @@ class ViewController: UIViewController {
         var point1 = myHome.coordinate; point1.latitude += 0.06
         // pin(annptation)된 집주소 위치에서 삼각형의 정가운데 위도 위로 0.06 만큼 거리에 점을 찍는다
         var point2 = myHome.coordinate; point2.longitude -= 0.065;   point2.latitude -= 0.04
-        // 집주소 위치에서 위도 아래로 -0.065 만큼, 경도  -0.04. 만큼 거리(여기서 말하는 거리는 대각선)에 점을 찍는다.
+        // 집주소 위치에서 위도 아래로 -0.04 만큼, 경도 왼쪽 -0.065. 만큼 거리(여기서 말하는 거리는 대각선)에 점을 찍는다.
         // point1점과 point2점이 연결되서 빨간 선으로 나오는 것
         var point3 = myHome.coordinate; point3.longitude += 0.065;  point3.latitude -= 0.04
+        // 집주소 위치에서 위도 아래로 -0.04 만큼, 경도 오른쪽 +0.065. 만큼 거리(여기서 말하는 거리는 대각선)에 점을 찍는다.
         // point1점과 point2점, point3. 3개의 점이 빨간 선으로 연결되서 삼각형이 나오게 된다
         let points: [CLLocationCoordinate2D] = [point1, point2, point3, point1]
         let polyline = MKPolyline(coordinates: points, count: points.count)
