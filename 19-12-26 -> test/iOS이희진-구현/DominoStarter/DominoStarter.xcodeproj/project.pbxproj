@@ -16,6 +16,7 @@
 		4FFB600F23B511490066317F /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB600E23B511490066317F /* ListViewController.swift */; };
 		4FFB601323B5117D0066317F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB601223B5117D0066317F /* DetailViewController.swift */; };
 		4FFB601523B5119A0066317F /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB601423B5119A0066317F /* WishListViewController.swift */; };
+		70EB38A623C89E35000A8369 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EB38A523C89E35000A8369 /* Singleton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4FFB600E23B511490066317F /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		4FFB601223B5117D0066317F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4FFB601423B5119A0066317F /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
+		70EB38A523C89E35000A8369 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				4FFB600B23B511210066317F /* DominoData.swift */,
+				70EB38A523C89E35000A8369 /* Singleton.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FFB601523B5119A0066317F /* WishListViewController.swift in Sources */,
+				70EB38A623C89E35000A8369 /* Singleton.swift in Sources */,
 				4FFB5FF723B510DA0066317F /* AppDelegate.swift in Sources */,
 				4FFB5FF923B510DA0066317F /* SceneDelegate.swift in Sources */,
 				4FFB601323B5117D0066317F /* DetailViewController.swift in Sources */,

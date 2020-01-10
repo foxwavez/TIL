@@ -9,17 +9,18 @@
 import UIKit
 
 class WishListViewController: UIViewController {
-  
-  var menuInfo: Menu?
-  let tableView = UITableView()
     
-  override func viewDidLoad() {
-    super.viewDidLoad()
+
+    var count = 0
+    let tableView = UITableView()
     
-    setupUI()
-    
-    
-  }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupUI()
+        
+        
+    }
     private func setupUI() {
         navigationItem.title = "Wish List"
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "목록 지우기", style: .done, target: self, action: #selector(leftIemAction))
@@ -59,14 +60,14 @@ class WishListViewController: UIViewController {
 
 extension WishListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menuInfo?.products.count ?? 0
+//        return menuInfo?.products.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "wishCell", for: indexPath)
-        let data = menuInfo?.products[indexPath.row]
-        cell.textLabel?.text = data?.name ?? ""
-        cell.imageView?.image = UIImage(named: data?.image ?? "")
+//        let data = menuInfo?.products[indexPath.row]
+//        cell.textLabel?.text = wishPizza.wishListDict
+//        cell.imageView?.image = UIImage(na   med: data?.image ?? "")
         return cell
         
     }

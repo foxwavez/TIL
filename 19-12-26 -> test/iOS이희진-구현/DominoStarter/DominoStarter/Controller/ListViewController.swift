@@ -109,6 +109,7 @@ extension ListViewController: UITableViewDelegate {
         let detailVC = DetailViewController()
         let data = menuData[indexPath.section].products[indexPath.row]
         detailVC.title = data.name
+        detailVC.detailMenuTitle = data.name
         detailVC.imageView.image = UIImage(named: data.image)
         
         self.navigationController?.pushViewController(detailVC, animated: true)

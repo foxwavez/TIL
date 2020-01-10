@@ -14,7 +14,8 @@ class DetailViewController: UIViewController {
     var plusBtn = UIButton()
     var minusBtn = UIButton()
     let displayLable = UILabel()
-    var count :Int = 0
+    var count: Int = 0
+    var detailMenuTitle = ""
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -22,6 +23,11 @@ class DetailViewController: UIViewController {
     setupConstraint()
   }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        count = wishPizza.wishListDict[detailMenuTitle] ?? 0
+    }
+
     private func setupUI() {
         view.backgroundColor = .white
         
@@ -30,7 +36,14 @@ class DetailViewController: UIViewController {
         minusBtn = self.btnStyle(title: "-")
 
         
-        displayLable.text = "\(count)개"
+        
+        
+        if wishPizza.wishListDict[detailMenuTitle] == nil {
+            displayLable.text = "\(count)개"
+        } else {
+            displayLable.text = "\(wishPizza.wishListDict[detailMenuTitle] ?? 0)개"
+        }
+        
         displayLable.textColor = .white
         displayLable.textAlignment = .center
         displayLable.backgroundColor = .darkGray
@@ -99,6 +112,8 @@ class DetailViewController: UIViewController {
         default:
             break
         }
+        wishPizza.wishListDict[detailMenuTitle] = count
+        print(wishPizza.wishListDict)
     }
 }
 
