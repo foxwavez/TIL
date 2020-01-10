@@ -10,28 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let button = UIButton()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUI()
-        setupConstraint()
     }
-    
-    private func setUI() {
-        button.setTitle("button", for: .normal)
-        button
-    }
-    private func setupConstraint() {
-        let guide = self.view.safeAreaLayoutGuide
-        
-        button.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            button.topAnchor.constraint(equalTo: guide.topAnchor,constant: <#Int#>),
-            button.leadingAnchor.constraint(equalTo: guide.leadingAnchor, constant: <#Int#>),
-            button.trailingAnchor.constraint(equalTo: guide.trailingAnchor, constant: <#Int#>),
-            button.bottomAnchor.constraint(equalTo: guide.bottomAnchor, constant: <#Int#>)
-        ])
-    }
+  
 
 }
 
