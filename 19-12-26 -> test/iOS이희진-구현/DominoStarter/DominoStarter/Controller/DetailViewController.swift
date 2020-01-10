@@ -14,7 +14,7 @@ class DetailViewController: UIViewController {
     var plusBtn = UIButton()
     var minusBtn = UIButton()
     let displayLable = UILabel()
-   
+    var count :Int = 0
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -26,27 +26,17 @@ class DetailViewController: UIViewController {
         view.backgroundColor = .white
         
         plusBtn = self.btnStyle(title: "+")
-//        plusBtn.setTitle("+", for: .normal)
-//        plusBtn.layer.borderColor = UIColor.darkGray.cgColor
-//        plusBtn.layer.borderWidth = 2
-//        plusBtn.titleLabel?.font = UIFont.systemFont(ofSize: 24)
-//        plusBtn.setTitleColor(.darkGray, for: .normal)
-//        self.view.addSubview(plusBtn)
 
         minusBtn = self.btnStyle(title: "-")
-//        minusBtn.setTitle("-", for: .normal)
-//        minusBtn.layer.borderColor = UIColor.darkGray.cgColor
-//        minusBtn.layer.borderWidth = 2
-//        minusBtn.titleLabel?.font = UIFont.systemFont(ofSize: 24)
-//        minusBtn.setTitleColor(.darkGray, for: .normal)
-//        self.view.addSubview(minusBtn)
+
         
-        displayLable.text = "\(0)개"
+        displayLable.text = "\(count)개"
         displayLable.textColor = .white
         displayLable.textAlignment = .center
         displayLable.backgroundColor = .darkGray
 //        self.view.addSubview(displayLable)
-//        plusBtn.addTarget(self, action: #selector(btnAction), for: .touchUpInside)
+        plusBtn.addTarget(self, action: #selector(btnAction), for: .touchUpInside)
+        minusBtn.addTarget(self, action: #selector(btnAction(_:)), for: .touchUpInside)
         
         [imageView, plusBtn, minusBtn, displayLable].forEach {
                    view.addSubview($0)
@@ -97,10 +87,20 @@ class DetailViewController: UIViewController {
           
           return button
       }
-    
+    @objc private func btnAction(_ sender: UIButton) {
+        switch sender {
+        case plusBtn:
+            count = count + 1
+            displayLable.text = "\(count)개"
+        case minusBtn:
+            guard count > 0 else { return }
+            count = count - 1
+            displayLable.text = "\(count)개"
+        default:
+            break
+        }
+    }
 }
 
 
-//@objc private func btnAction(_ sender: UIButton) {
-//    return 0
-//}
+
