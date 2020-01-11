@@ -56,7 +56,12 @@ class WishListViewController: UIViewController {
     }
     
     @objc private func leftIemAction() {
-        
+        wishPizza.wishListDict.removeAll()
+        tableView.reloadData()
+        // reloadData()를 해줘야 하는 이유
+        // 지워진 데이터를 현재 화면에서 보여줘야 되기 때문
+        // 하지 않으면 wishList 화면을 벗어나고 돌아와야
+        // 데이터가 사라진다.
     }
     @objc private func rightIemAction() {
         
