@@ -64,10 +64,14 @@ class WishListViewController: UIViewController {
         // 데이터가 사라진다.
     }
     @objc private func rightIemAction() {
-//        let wishPizzaDict = wishPizza.wishListDict
+        let wishPizzaDict = wishPizza.wishListDict
+        var wishPizzaMessage: String = ""
+        for (key, value) in wishPizzaDict {
+            wishPizzaMessage = wishPizzaMessage + "\(key) - \(value)개\n"
+        }
         
         // create the alert
-        let alert = UIAlertController(title: "결제 내역", message: "Would you like to continue learning how to use iOS alerts?", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "결제 내역", message: wishPizzaMessage, preferredStyle: UIAlertController.Style.alert)
 
         // add the actions (buttons)
         alert.addAction(UIAlertAction(title: "결제하기", style: UIAlertAction.Style.default, handler: nil))
@@ -83,7 +87,6 @@ class WishListViewController: UIViewController {
 
 extension WishListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return menuInfo?.products.count ?? 0
         
         return wishPizza.wishListDict.count
     }
