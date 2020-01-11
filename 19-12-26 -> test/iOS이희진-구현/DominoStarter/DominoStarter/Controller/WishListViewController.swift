@@ -21,6 +21,11 @@ class WishListViewController: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+        // 유저가 주문을 변경(추가, 빼기)를 할 수 있기 때문에
+        // 바뀐 데이터를 가져와서 반영을 할 때마다 reloadData를 해줘야 한다.
+        
         print(wishPizza.wishListDict)
     }
     
@@ -33,7 +38,7 @@ class WishListViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "wishCell")
+//        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "wishCell")
         self.view.addSubview(tableView)
         
         setupConstraint()
@@ -74,7 +79,7 @@ extension WishListViewController: UITableViewDataSource {
         
 //        let data = menuInfo?.products[indexPath.row]
         cell.textLabel?.text = Array(element.keys)[indexPath.row]
-//        cell.imageView?.image = UIImage(named: data?.image ?? "")
+        cell.imageView?.image = UIImage(named: Array(element.keys)[indexPath.row])
         return cell
         
     }
