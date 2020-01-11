@@ -19,8 +19,11 @@ class WishListViewController: UIViewController {
         
         setupUI()
         
-        
     }
+    override func viewWillAppear(_ animated: Bool) {
+        print(wishPizza.wishListDict)
+    }
+    
     private func setupUI() {
         navigationItem.title = "Wish List"
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "목록 지우기", style: .done, target: self, action: #selector(leftIemAction))
@@ -61,6 +64,8 @@ class WishListViewController: UIViewController {
 extension WishListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        return menuInfo?.products.count ?? 0
+        
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
