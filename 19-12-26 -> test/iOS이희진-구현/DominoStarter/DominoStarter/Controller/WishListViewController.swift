@@ -64,7 +64,17 @@ class WishListViewController: UIViewController {
         // 데이터가 사라진다.
     }
     @objc private func rightIemAction() {
+//        let wishPizzaDict = wishPizza.wishListDict
         
+        // create the alert
+        let alert = UIAlertController(title: "결제 내역", message: "Would you like to continue learning how to use iOS alerts?", preferredStyle: UIAlertController.Style.alert)
+
+        // add the actions (buttons)
+        alert.addAction(UIAlertAction(title: "결제하기", style: UIAlertAction.Style.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "돌아가기", style: UIAlertAction.Style.cancel, handler: nil))
+
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
@@ -89,12 +99,12 @@ extension WishListViewController: UITableViewDataSource {
         
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "wishCell", for: indexPath)
         
-        let element = wishPizza.wishListDict
+        let wishPizzaDict = wishPizza.wishListDict
         
 //        let data = menuInfo?.products[indexPath.row]
-        cell.textLabel?.text = Array(element.keys)[indexPath.row]
-        cell.imageView?.image = UIImage(named: Array(element.keys)[indexPath.row])
-        cell.detailTextLabel?.text = "\( Array(element.values)[indexPath.row])개"
+        cell.textLabel?.text = Array(wishPizzaDict.keys)[indexPath.row]
+        cell.imageView?.image = UIImage(named: Array(wishPizzaDict.keys)[indexPath.row])
+        cell.detailTextLabel?.text = "\( Array(wishPizzaDict.values)[indexPath.row])개"
         return cell
         
     }
