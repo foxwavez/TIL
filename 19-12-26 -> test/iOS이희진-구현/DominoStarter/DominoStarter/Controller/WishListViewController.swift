@@ -65,14 +65,16 @@ extension WishListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        return menuInfo?.products.count ?? 0
         
-        return 0
+        return wishPizza.wishListDict.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "wishCell", for: indexPath)
+        let element = wishPizza.wishListDict
+        
 //        let data = menuInfo?.products[indexPath.row]
-//        cell.textLabel?.text = wishPizza.wishListDict
-//        cell.imageView?.image = UIImage(na   med: data?.image ?? "")
+        cell.textLabel?.text = Array(element.keys)[indexPath.row]
+//        cell.imageView?.image = UIImage(named: data?.image ?? "")
         return cell
         
     }
