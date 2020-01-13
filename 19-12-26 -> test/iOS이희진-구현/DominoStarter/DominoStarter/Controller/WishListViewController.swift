@@ -70,6 +70,9 @@ class WishListViewController: UIViewController {
             wishPizzaMessage = wishPizzaMessage + "\(key) - \(value)개\n"
         }
         
+        
+//        let price =  menuData[Menu].
+        
         // create the alert
         let alert = UIAlertController(title: "결제 내역", message: wishPizzaMessage, preferredStyle: UIAlertController.Style.alert)
 
