@@ -9,5 +9,7 @@
 import UIKit
 
 final class UrlWSViewController: UIViewController {
-  
+    override func viewDidLoad() {
+        view.backgroundColor = .white
+    }
 }
