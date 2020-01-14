@@ -10,11 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    private let itemHeight: CGFloat = 100
     private var leftBtn = UIButton()
-    private var leftBtnSub1 = UIButton()
-    
-    
-    private let colors = [#colorLiteral(red: 0, green: 0.662745098, blue: 0.8078431373, alpha: 1), #colorLiteral(red: 0, green: 0.6980392157, blue: 0.662745098, alpha: 1), #colorLiteral(red: 0.4235294118, green: 0.7607843137, blue: 0.2901960784, alpha: 1), #colorLiteral(red: 0.5921568627, green: 0.8431372549, blue: 0, alpha: 1), #colorLiteral(red: 0.8156862745, green: 0.8745098039, blue: 0, alpha: 1), #colorLiteral(red: 1, green: 0.8196078431, blue: 0, alpha: 1), #colorLiteral(red: 1, green: 0.4039215686, blue: 0.1215686275, alpha: 1), #colorLiteral(red: 0.8549019608, green: 0.1607843137, blue: 0.1098039216, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)]
+    var buttons = [UIButton]()
+    private let colors = [#colorLiteral(red: 0, green: 0.662745098, blue: 0.8078431373, alpha: 1), #colorLiteral(red: 0, green: 0.6980392157, blue: 0.662745098, alpha: 1), #colorLiteral(red: 0.4235294118, green: 0.7607843137, blue: 0.2901960784, alpha: 1), #colorLiteral(red: 0.5921568627, green: 0.8431372549, blue: 0, alpha: 1), #colorLiteral(red: 0.8156862745, green: 0.8745098039, blue: 0, alpha: 1), #colorLiteral(red: 1, green: 0.8196078431, blue: 0, alpha: 1), #colorLiteral(red: 1, green: 0.4039215686, blue: 0.1215686275, alpha: 1), #colorLiteral(red: 0.8549019608, green: 0.1607843137, blue: 0.1098039216, alpha: 1)]
+    var buttonState = false
     
     
     override func viewDidLoad() {
@@ -33,11 +33,13 @@ class ViewController: UIViewController {
     
     private func setUI() {
         
+        createButton(count: 6)
         leftBtn = self.btnStyle(title: "버튼 0")
         leftBtn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         [leftBtn].forEach {
         view.addSubview($0)
         }
+        
     }
     
     private func btnStyle(title: String) -> UIButton {
@@ -50,17 +52,47 @@ class ViewController: UIViewController {
         return button
     }
     
+    func createButton(count: Int) {
+        for i in 1...count {
+            let tempButton = btnStyle(title: "버튼 \(i)")
+            buttons.append(tempButton)
+        }
+        
+        buttons.forEach { view.addSubview($0) }
+//        for button in buttons { view.addSubview(button) }
+    }
+    
     @objc private func buttonAction() {
-        leftBtnSub1 = self.btnStyle(title: "버튼 1")
         
         
-        [leftBtnSub1].forEach {
-        view.addSubview($0)
+        if buttonState == false {
+            for (index, button) in buttons.enumerated() {
+                UIView.animate(withDuration: 0.3) {
+                    button.center.y -= (self.itemHeight * CGFloat(index))
+                }
+            }
+            buttonState = true
+        } else {
+            for (index, button) in buttons.enumerated() {
+                UIView.animate(withDuration: 0.3) {
+                    button.center.y += (self.itemHeight * CGFloat(index))
+                }
+            }
+            buttonState = false
         }
         
-        UIView.animate(withDuration: 0.3) {
-            self.leftBtnSub1.center.y -= 100
-        }
+//        UIView.animate(withDuration: 0.3) {
+//            self.leftBtnSub1.center.y -= 100
+//        }
+//        UIView.animate(withDuration: 0.3) {
+//            self.leftBtnSub2.center.y -= 200
+//        }
+//        UIView.animate(withDuration: 0.3) {
+//            self.leftBtnSub3.center.y -= 300
+//        }
+//        UIView.animate(withDuration: 0.3) {
+//            self.leftBtnSub4.center.y -= 400
+//        }
 
     }
 
