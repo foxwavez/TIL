@@ -25,8 +25,7 @@ final class ViewController: UIViewController {
     let scheme = "mailto:someone@gmail.com?cc=foo@bar.co@subject=title&bod=MyText"
     
     guard let url = URL(string: scheme),
-        UIApplication.shared.canOpenURL(url)
-        else { return }
+    UIApplication.shared.canOpenURL(url) else { return }
     UIApplication.shared.open(url)
   }
 
@@ -46,6 +45,15 @@ final class ViewController: UIViewController {
     guard UIApplication.shared.canOpenURL(url) else { return }
     UIApplication.shared.open(url)
   }
+    
+    @IBAction func callNumber(_ sender: UIButton) {
+        print("\n---------- [ call ] ----------\n")
+        let url = URL(string: "tel:010-2825-7532")!
+        
+        guard UIApplication.shared.canOpenURL(url) else { return }
+        UIApplication.shared.open(url)
+    }
+    
     
     // ↑ 위에는 시스템 앱
     // ↓ 아래에는 3rd party 앱
