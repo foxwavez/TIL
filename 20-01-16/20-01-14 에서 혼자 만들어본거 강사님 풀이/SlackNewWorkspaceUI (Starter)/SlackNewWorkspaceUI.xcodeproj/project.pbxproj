@@ -7,27 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5257D98520F3B445001C0480 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5257D98420F3B445001C0480 /* AppDelegate.swift */; };
-		5257D98A20F3B445001C0480 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5257D98820F3B445001C0480 /* Main.storyboard */; };
-		5257D98C20F3B448001C0480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5257D98B20F3B448001C0480 /* Assets.xcassets */; };
-		5257D98F20F3B448001C0480 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5257D98D20F3B448001C0480 /* LaunchScreen.storyboard */; };
-		5257D99920F3B65C001C0480 /* ImageAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5257D99820F3B65C001C0480 /* ImageAnimationViewController.swift */; };
-		5257D99B20F3C883001C0480 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5257D99A20F3C883001C0480 /* AnimationViewController.swift */; };
+		520FF2FE23D01D7000C57354 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520FF2FD23D01D7000C57354 /* UIViewExtension.swift */; };
+		523A13422286CB8100B11C25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523A13412286CB8100B11C25 /* AppDelegate.swift */; };
+		523A13442286CB8100B11C25 /* CreateNewWSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523A13432286CB8100B11C25 /* CreateNewWSViewController.swift */; };
+		523A13472286CB8100B11C25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523A13452286CB8100B11C25 /* Main.storyboard */; };
+		523A13492286CB8100B11C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523A13482286CB8100B11C25 /* Assets.xcassets */; };
+		523A134C2286CB8100B11C25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523A134A2286CB8100B11C25 /* LaunchScreen.storyboard */; };
+		523A13542287218100B11C25 /* NameWSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523A13532287218100B11C25 /* NameWSViewController.swift */; };
+		523A135822874C6300B11C25 /* UrlWSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523A135722874C6300B11C25 /* UrlWSViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5257D98120F3B445001C0480 /* UIViewAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIViewAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5257D98420F3B445001C0480 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5257D98920F3B445001C0480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5257D98B20F3B448001C0480 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5257D98E20F3B448001C0480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5257D99020F3B448001C0480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5257D99820F3B65C001C0480 /* ImageAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAnimationViewController.swift; sourceTree = "<group>"; };
-		5257D99A20F3C883001C0480 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
+		520FF2FD23D01D7000C57354 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		523A133E2286CB8100B11C25 /* SlackNewWorkspaceUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlackNewWorkspaceUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		523A13412286CB8100B11C25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		523A13432286CB8100B11C25 /* CreateNewWSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewWSViewController.swift; sourceTree = "<group>"; };
+		523A13462286CB8100B11C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		523A13482286CB8100B11C25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		523A134B2286CB8100B11C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		523A134D2286CB8100B11C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		523A13532287218100B11C25 /* NameWSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameWSViewController.swift; sourceTree = "<group>"; };
+		523A135722874C6300B11C25 /* UrlWSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlWSViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5257D97E20F3B445001C0480 /* Frameworks */ = {
+		523A133B2286CB8100B11C25 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,73 +41,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5257D97820F3B445001C0480 = {
+		523A13352286CB8000B11C25 = {
 			isa = PBXGroup;
 			children = (
-				5257D98320F3B445001C0480 /* UIViewAnimation */,
-				5257D98220F3B445001C0480 /* Products */,
+				523A13402286CB8100B11C25 /* SlackNewWorkspaceUI */,
+				523A133F2286CB8100B11C25 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5257D98220F3B445001C0480 /* Products */ = {
+		523A133F2286CB8100B11C25 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5257D98120F3B445001C0480 /* UIViewAnimation.app */,
+				523A133E2286CB8100B11C25 /* SlackNewWorkspaceUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5257D98320F3B445001C0480 /* UIViewAnimation */ = {
+		523A13402286CB8100B11C25 /* SlackNewWorkspaceUI */ = {
 			isa = PBXGroup;
 			children = (
-				5257D98420F3B445001C0480 /* AppDelegate.swift */,
-				5257D99820F3B65C001C0480 /* ImageAnimationViewController.swift */,
-				5257D99A20F3C883001C0480 /* AnimationViewController.swift */,
-				5257D98B20F3B448001C0480 /* Assets.xcassets */,
-				5257D98820F3B445001C0480 /* Main.storyboard */,
-				5257D98D20F3B448001C0480 /* LaunchScreen.storyboard */,
-				5257D99020F3B448001C0480 /* Info.plist */,
+				523A13412286CB8100B11C25 /* AppDelegate.swift */,
+				523A13432286CB8100B11C25 /* CreateNewWSViewController.swift */,
+				523A13532287218100B11C25 /* NameWSViewController.swift */,
+				523A135722874C6300B11C25 /* UrlWSViewController.swift */,
+				520FF2FD23D01D7000C57354 /* UIViewExtension.swift */,
+				523A13452286CB8100B11C25 /* Main.storyboard */,
+				523A13482286CB8100B11C25 /* Assets.xcassets */,
+				523A134A2286CB8100B11C25 /* LaunchScreen.storyboard */,
+				523A134D2286CB8100B11C25 /* Info.plist */,
 			);
-			path = UIViewAnimation;
+			path = SlackNewWorkspaceUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5257D98020F3B445001C0480 /* UIViewAnimation */ = {
+		523A133D2286CB8100B11C25 /* SlackNewWorkspaceUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5257D99320F3B448001C0480 /* Build configuration list for PBXNativeTarget "UIViewAnimation" */;
+			buildConfigurationList = 523A13502286CB8100B11C25 /* Build configuration list for PBXNativeTarget "SlackNewWorkspaceUI" */;
 			buildPhases = (
-				5257D97D20F3B445001C0480 /* Sources */,
-				5257D97E20F3B445001C0480 /* Frameworks */,
-				5257D97F20F3B445001C0480 /* Resources */,
+				523A133A2286CB8100B11C25 /* Sources */,
+				523A133B2286CB8100B11C25 /* Frameworks */,
+				523A133C2286CB8100B11C25 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = UIViewAnimation;
-			productName = UIViewAnimation;
-			productReference = 5257D98120F3B445001C0480 /* UIViewAnimation.app */;
+			name = SlackNewWorkspaceUI;
+			productName = SlackNewWorkspaceUI;
+			productReference = 523A133E2286CB8100B11C25 /* SlackNewWorkspaceUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5257D97920F3B445001C0480 /* Project object */ = {
+		523A13362286CB8000B11C25 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = giftbot;
 				TargetAttributes = {
-					5257D98020F3B445001C0480 = {
-						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 1010;
+					523A133D2286CB8100B11C25 = {
+						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 5257D97C20F3B445001C0480 /* Build configuration list for PBXProject "UIViewAnimation" */;
+			buildConfigurationList = 523A13392286CB8000B11C25 /* Build configuration list for PBXProject "SlackNewWorkspaceUI" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,55 +116,57 @@
 				en,
 				Base,
 			);
-			mainGroup = 5257D97820F3B445001C0480;
-			productRefGroup = 5257D98220F3B445001C0480 /* Products */;
+			mainGroup = 523A13352286CB8000B11C25;
+			productRefGroup = 523A133F2286CB8100B11C25 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5257D98020F3B445001C0480 /* UIViewAnimation */,
+				523A133D2286CB8100B11C25 /* SlackNewWorkspaceUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5257D97F20F3B445001C0480 /* Resources */ = {
+		523A133C2286CB8100B11C25 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5257D98F20F3B448001C0480 /* LaunchScreen.storyboard in Resources */,
-				5257D98C20F3B448001C0480 /* Assets.xcassets in Resources */,
-				5257D98A20F3B445001C0480 /* Main.storyboard in Resources */,
+				523A134C2286CB8100B11C25 /* LaunchScreen.storyboard in Resources */,
+				523A13492286CB8100B11C25 /* Assets.xcassets in Resources */,
+				523A13472286CB8100B11C25 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5257D97D20F3B445001C0480 /* Sources */ = {
+		523A133A2286CB8100B11C25 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5257D98520F3B445001C0480 /* AppDelegate.swift in Sources */,
-				5257D99920F3B65C001C0480 /* ImageAnimationViewController.swift in Sources */,
-				5257D99B20F3C883001C0480 /* AnimationViewController.swift in Sources */,
+				520FF2FE23D01D7000C57354 /* UIViewExtension.swift in Sources */,
+				523A135822874C6300B11C25 /* UrlWSViewController.swift in Sources */,
+				523A13442286CB8100B11C25 /* CreateNewWSViewController.swift in Sources */,
+				523A13542287218100B11C25 /* NameWSViewController.swift in Sources */,
+				523A13422286CB8100B11C25 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5257D98820F3B445001C0480 /* Main.storyboard */ = {
+		523A13452286CB8100B11C25 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5257D98920F3B445001C0480 /* Base */,
+				523A13462286CB8100B11C25 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		5257D98D20F3B448001C0480 /* LaunchScreen.storyboard */ = {
+		523A134A2286CB8100B11C25 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5257D98E20F3B448001C0480 /* Base */,
+				523A134B2286CB8100B11C25 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -167,7 +174,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5257D99120F3B448001C0480 /* Debug */ = {
+		523A134E2286CB8100B11C25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -219,7 +226,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -227,7 +235,7 @@
 			};
 			name = Debug;
 		};
-		5257D99220F3B448001C0480 /* Release */ = {
+		523A134F2286CB8100B11C25 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -274,6 +282,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -281,38 +290,38 @@
 			};
 			name = Release;
 		};
-		5257D99420F3B448001C0480 /* Debug */ = {
+		523A13512286CB8100B11C25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = UIViewAnimation/Info.plist;
+				DEVELOPMENT_TEAM = 36346V3588;
+				INFOPLIST_FILE = SlackNewWorkspaceUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = use.your.bundleIdentifier;
+				PRODUCT_BUNDLE_IDENTIFIER = use.your.identifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		5257D99520F3B448001C0480 /* Release */ = {
+		523A13522286CB8100B11C25 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = UIViewAnimation/Info.plist;
+				DEVELOPMENT_TEAM = 36346V3588;
+				INFOPLIST_FILE = SlackNewWorkspaceUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = use.your.bundleIdentifier;
+				PRODUCT_BUNDLE_IDENTIFIER = use.your.identifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -322,25 +331,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5257D97C20F3B445001C0480 /* Build configuration list for PBXProject "UIViewAnimation" */ = {
+		523A13392286CB8000B11C25 /* Build configuration list for PBXProject "SlackNewWorkspaceUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5257D99120F3B448001C0480 /* Debug */,
-				5257D99220F3B448001C0480 /* Release */,
+				523A134E2286CB8100B11C25 /* Debug */,
+				523A134F2286CB8100B11C25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5257D99320F3B448001C0480 /* Build configuration list for PBXNativeTarget "UIViewAnimation" */ = {
+		523A13502286CB8100B11C25 /* Build configuration list for PBXNativeTarget "SlackNewWorkspaceUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5257D99420F3B448001C0480 /* Debug */,
-				5257D99520F3B448001C0480 /* Release */,
+				523A13512286CB8100B11C25 /* Debug */,
+				523A13522286CB8100B11C25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5257D97920F3B445001C0480 /* Project object */;
+	rootObject = 523A13362286CB8000B11C25 /* Project object */;
 }

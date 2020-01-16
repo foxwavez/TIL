@@ -167,12 +167,14 @@ final class AnimationViewController: UIViewController {
         // transitionCrossDisolve : fade in-out 효과
         // transitionFlipFromTop/Left/Right/Bottom : 해당 방향으로 뒤집는 효과
         
+        // 라벨에 숫자의 카운트가 0으로 떨어지면 뺑글이랑 라벨 사라짐
         UIView.transition(with: countDownLabel,
                           duration: 0.5,
                           options: [.transitionCrossDissolve], // fade in-out
                           animations: { self.count -= 1}
         ) { _ in
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                // 재귀함수
                 guard self.count == 0 else { return self.countDown() }
                 self.count = 4
                 self.countDownLabel.isHidden = true
