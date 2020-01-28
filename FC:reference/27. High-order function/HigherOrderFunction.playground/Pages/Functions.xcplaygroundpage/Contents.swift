@@ -111,11 +111,13 @@ for (idx, value) in intArr.enumerated() {
 print(numArr)
 
 // map
-let indexPlusElement = intArr.enumerated().map {
+let indexPlusElement = intArr.enumerated().map
+// map은 컬렉션 안에 연산을 하고 그 데이터를 어떠한 변수(ex. indexPlusElement) 안에 저장해줘야 한다. 안 그럼 워닝
   return $0 + $1
     // $0은 idx, $1은 value
 }
 print(indexPlusElement)
+
 
 // 클로저 안에서 타입이 명시가 안되고 그냥 사용 ($0, $1) 이런 형태 -> 잘 안되는 경우도 있다(컴파일러의 한계) 예를 들어 print를 찍어야 한다던가
 // 그럴 땐 클로저 안에 매개변수의 타입을 명확하게 작성하면 된다
@@ -193,13 +195,34 @@ print(sum1to100)
 // 6 + 4 = 10
 // ....
 
-print((1...100).reduce(0) { $0 + $1 })
 
-//직접 더하는 형태 X
+//sum1to100 코드를 for문으로 구현했을 때
+var sum = 0
+for i in 1...100 {
+    sum = sum + i
+}
+print(sum)
+
+
+(1...100).reduce(0) { (sum: Int, next: Int) -> Int in
+    return sum - next // 0 - 1 = -1,  -1 -2 = -3
+}
+//  sum1to100 코드를 줄인 형태
+print((1...100).reduce(0) { $0 + $1 })
+print((1...100).reduce(0, +))
+
+//직접 더하는 형태 X     return 값이 sum이 되는 것이다
 //(1...100).reduce(0) { (sum, next) in
 //  sum += next
 //}
 
+["123", "456"].reduce(100) { (initialResult: Int, value: String) in
+    return initialResult + Int(value)! // 100 + 123, 223 + 456 = 679
+}
+
+["123", "456"].reduce(100) {
+    $0 + Int($1)! // 100 + 123, 223 + 456 = 679
+}
 
 
 /*:
@@ -212,8 +235,15 @@ print((1...100).reduce(0) { $0 + $1 })
 // 아래 둘 모두 reduce를 이용해 "123" 이라는 문자열이 되도록 만들기
 ["1", "2", "3"]
 
-[1, 2, 3]
+["1", "2", "3"].reduce("") { (result: String, value: String) -> String in
+    return result + value
+}
 
+
+[1, 2, 3]
+[1, 2, 3].reduce("") { (result, value) -> String in
+    return result + String(value)
+}
 
 
 /*:
@@ -226,14 +256,16 @@ print((1...100).reduce(0) { $0 + $1 })
 print("\n---------- [ compactMap ] ----------\n")
 
 let optionalStringArr = ["A", nil, "B", nil, "C"]
-print(optionalStringArr)
-print(optionalStringArr.compactMap { $0 })
+print(optionalStringArr)// "[Optional("A"), nil, Optional("B"), nil, Optional("C")]"
+print(optionalStringArr.compactMap { $0 }) // ["A", "B", "C"]
+// compactMap을 사용해서 옵셔널을 제거
 
 
 let numbers = [-2, -1, 0, 1, 2]
-let positiveNumbers = numbers.compactMap { $0 >= 0 ? $0 : nil }
-print(positiveNumbers)
+let positiveNumbers = numbers.compactMap { $0 >= 0 ? $0 : nil } // 0보다 크면 $0을 반환 아니면 nil 반환
+print(positiveNumbers) // 0보다 작은 -2, -1은 nil로 반환되고 compactMap 때문에 nil이 된 -2, -1이 제거 됨
 
+// .map이라서 옵셔널이 제거되지 않아 nil 값이 그대로 나옴
 print(numbers.map { $0 >= 0 ? $0 : nil })
 
 /*:
@@ -246,19 +278,25 @@ print("\n---------- [ flatMap ] ----------\n")
 
 let nestedArr: [[Int]] = [[1, 2, 3], [9, 8, 7], [-1, 0, 1]]
 print(nestedArr)
-print(nestedArr.flatMap { $0 })
+print(nestedArr.flatMap { $0 }) // [1, 2, 3, 9, 8, 7, -1, 0, 1] 로 변한다.
 
 
-let nestedArr2: [[[Int]]] = [[[1, 2], [3, 4], [5, 6]], [[7, 8], [9, 10]]]
-let flattenNumbers1 = nestedArr2.flatMap { $0 }
+let nestedArr2: [[[Int]]] = [[[1, 2], [3, 4], [5, 6]], [[7, 8], [9, 10]]] // 3중 배열
+let flattenNumbers1 = nestedArr2.flatMap { $0 } // [[1, 2], [3, 4], [5, 6]], [[7, 8], [9, 10]] // 2중 배열
 print(flattenNumbers1)
 
-let flattenNumbers2 = flattenNumbers1.flatMap { $0 }
+let flattenNumbers2 = flattenNumbers1.flatMap { $0 } // 1중 배열로 변환
 print(flattenNumbers2)
 
-nestedArr2
+let x = nestedArr2
+  .flatMap { $0 + [[5]]} // flatMap {} 안에서 연산을 해줄 수 있다
+x
+
+    let y = nestedArr2
+y
   .flatMap { $0 }
   .flatMap { $0 }
+// 연속적으로 메소드 체이닝이 가능하다
 
 
 
