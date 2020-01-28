@@ -61,7 +61,7 @@ final class BasicCodeViewController: UIViewController {
   }
   
   func setupCollectionView() {
-    let layout = UICollectionViewFlowLayout()
+    let layout = UICollectionViewFlowLayout() // 컬렉션뷰 사용시 UICollectionViewFlowLayout() 이걸 사용해야 에러가 나지 않는다고
     layout.minimumLineSpacing = 20 // 기본값 10
     layout.minimumInteritemSpacing = 10 // 기본값 10
     layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5) // 기본값 .zero
@@ -77,6 +77,8 @@ final class BasicCodeViewController: UIViewController {
   }
   
   func setupNavigationItem() {
+    let changeDirection = UIBarButtonItem(barButtonSystemItem: .reply, target: self, action: #selector(changeCollectionViewDirection(_:)))
+    navigationItem.rightBarButtonItem = changeDirection
   }
 
   
@@ -98,6 +100,9 @@ final class BasicCodeViewController: UIViewController {
     }
     
     @objc private func changeCollectionViewDirection(_ sender: Any) {
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let direction = layout.scrollDirection
+        layout.scrollDirection = (direction == .horizontal) ?  .vertical : .horizontal // 삼항연산자
         
     }
 }
