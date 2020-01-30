@@ -23,7 +23,8 @@ class ListViewController: UIViewController {
         [tableView].forEach {
             view.addSubview($0)
         }
-
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CategoryCell")
         setupConstraint()
     }
     private func setupConstraint() {
@@ -38,3 +39,30 @@ class ListViewController: UIViewController {
         ])
     }
 }
+
+// MARK: - UITableViewDataSource
+
+extension ListViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return menuData.count
+    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        menuData[section].category
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return menuData[section].products.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
+        let data = menuData[indexPath.section].products[indexPath.row]
+        cell.textLabel?.text = data.name
+        return cell
+
+    }
+    
+    
+}
+
+
+
