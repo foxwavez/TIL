@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // ->
-    var window: UIWindow? // 이거를 작성해 줘야 한다
+    var window: UIWindow? // iOS 12.0 버전을 대응해야 하기 때문에 이거를 작성해 줘야 한다
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
