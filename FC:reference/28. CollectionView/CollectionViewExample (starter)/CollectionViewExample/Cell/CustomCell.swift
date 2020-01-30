@@ -33,7 +33,7 @@ final class CustomCell: UICollectionViewCell {
         contentView.addSubview(imageView)
         // titleLabel
         titleLabel.textAlignment = .center
-        titleLabel.textColor = .black
+        titleLabel.textColor = .white
         titleLabel.font = UIFont.preferredFont(forTextStyle: .headline)
         contentView.addSubview(titleLabel)
     }

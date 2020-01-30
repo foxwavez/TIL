@@ -111,7 +111,7 @@ for (idx, value) in intArr.enumerated() {
 print(numArr)
 
 // map
-let indexPlusElement = intArr.enumerated().map
+let indexPlusElement = intArr.enumerated().map {
 // map은 컬렉션 안에 연산을 하고 그 데이터를 어떠한 변수(ex. indexPlusElement) 안에 저장해줘야 한다. 안 그럼 워닝
   return $0 + $1
     // $0은 idx, $1은 value

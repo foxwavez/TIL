@@ -82,8 +82,9 @@ print("\n---------- [ Practice 2 ] ----------\n")
 
 // 문제
 // 배열의 각 인덱스와 해당 인덱스의 요소를 곱한 값 중 홀수는 제외하고 짝수에 대해서만 모든 값을 더하여 결과 출력
+
 // 1. 배열의 각 요소 * index 값을 반환하는 함수
-// 2. 짝수 여부를 판별하는 ㄴ함수
+// 2. 짝수 여부를 판별하는 함수
 // 3. 두 개의 숫자를 더하여 반환하는 함수
 // 위 1~3번에 해당하는 함수를 각각 정의하고 이것들을 함께 조합하여 위 문제의 결과를 도출할 것
 
@@ -94,11 +95,74 @@ func multiplyByIndex(index: Int, number: Int) -> Int {
 }
 
 func isEven(number: Int) -> Bool {
-    return number & 1 == 0
+    return number % 2 == 0
 }
 
 func addTwoNumbers(lhs: Int, rhs: Int) -> Int {
     return lhs + rhs
 }
 
+// map
+//let indexPlusElement = intArr.enumerated().map
+// map은 컬렉션 안에 연산을 하고 그 데이터를 어떠한 변수(ex. indexPlusElement) 안에 저장해줘야 한다. 안 그럼 워닝
+//  return $0 + $1
+    // $0은 idx, $1은 value
+//}
+//print(indexPlusElement)
+
+
+let multiplyByIndexNumber = immutableArray.enumerated().map { (offset, element) -> Int in
+    return offset * element
+}
+
+print(multiplyByIndexNumber)
+
+multiplyByIndexNumber.filter { $0 % 2 == 0 }
+
+let evenNumbers = multiplyByIndexNumber.filter { (number) -> Bool in
+    number.isMultiple(of: 2)
+}
+print(evenNumbers)
+
+
+let sumNumber = evenNumbers.reduce(0) { (result: Int, evenNumber: Int) -> Int in
+    return result + evenNumber
+}
+
+print(sumNumber)
+
+
+let result = immutableArray
+    .enumerated()
+    .map { (offset, element) -> Int in return offset * element }
+    .filter { $0 % 2 == 0 }
+    .reduce(0) { (result, evenNumber) -> Int in return result + evenNumber }
+print(result)
+
+let result1 = immutableArray
+    .enumerated()
+    .map { $0 * $1 }
+    .filter { $0 % 2 == 0 }
+    .reduce(0) { $0 + $1 }
+print(result1)
+
+let result2 = immutableArray
+    .enumerated()
+    .map(multiplyByIndex(index:number:))
+//    .map(*)
+//    .map { $0 * $1 }
+    .filter(isEven(number:))
+//    .filter { $0 % 2 == 0 }
+    .reduce(0, addTwoNumbers(lhs:rhs:))
+//    .reduce(0) { $0 + $1 }
+//    .reduce(0, +)
+print(result2)
+
+
+//var temp = 0
+//for (index, number) in immutableArray.enumerated() {
+//    temp = index * number
+//}
+//
+//print(temp)
 //: [Next](@next)
