@@ -16,4 +16,8 @@ class DetailViewController: UIViewController {
     
   }
 
+    private func setUI() {
+        
+    }
+    
 }

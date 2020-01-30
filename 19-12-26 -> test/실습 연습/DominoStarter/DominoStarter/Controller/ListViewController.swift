@@ -23,6 +23,8 @@ class ListViewController: UIViewController {
         [tableView].forEach {
             view.addSubview($0)
         }
+        
+        tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CategoryCell")
         setupConstraint()
@@ -57,12 +59,19 @@ extension ListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
         let data = menuData[indexPath.section].products[indexPath.row]
         cell.textLabel?.text = data.name
+        cell.imageView?.image = UIImage(named: data.name)
         return cell
 
     }
     
-    
 }
 
+// MARK: - UITableViewDelegate
+extension ListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        100
+    }
+}
 
 

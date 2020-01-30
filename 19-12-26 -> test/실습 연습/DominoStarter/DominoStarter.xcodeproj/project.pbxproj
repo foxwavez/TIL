@@ -16,6 +16,7 @@
 		4FFB600F23B511490066317F /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB600E23B511490066317F /* ListViewController.swift */; };
 		4FFB601323B5117D0066317F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB601223B5117D0066317F /* DetailViewController.swift */; };
 		4FFB601523B5119A0066317F /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB601423B5119A0066317F /* WishListViewController.swift */; };
+		7031F9E323E2F4E70005D57A /* SubListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7031F9E223E2F4E70005D57A /* SubListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4FFB600E23B511490066317F /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		4FFB601223B5117D0066317F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4FFB601423B5119A0066317F /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
+		7031F9E223E2F4E70005D57A /* SubListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				4FFB600E23B511490066317F /* ListViewController.swift */,
+				7031F9E223E2F4E70005D57A /* SubListViewController.swift */,
 				4FFB601223B5117D0066317F /* DetailViewController.swift */,
 				4FFB601423B5119A0066317F /* WishListViewController.swift */,
 			);
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FFB601523B5119A0066317F /* WishListViewController.swift in Sources */,
+				7031F9E323E2F4E70005D57A /* SubListViewController.swift in Sources */,
 				4FFB5FF723B510DA0066317F /* AppDelegate.swift in Sources */,
 				4FFB5FF923B510DA0066317F /* SceneDelegate.swift in Sources */,
 				4FFB601323B5117D0066317F /* DetailViewController.swift in Sources */,
@@ -313,7 +317,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZLN97H98PA;
+				DEVELOPMENT_TEAM = G4MM77V7NH;
 				INFOPLIST_FILE = DominoStarter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -331,7 +335,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZLN97H98PA;
+				DEVELOPMENT_TEAM = G4MM77V7NH;
 				INFOPLIST_FILE = DominoStarter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
