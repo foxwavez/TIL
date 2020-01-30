@@ -27,9 +27,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     wishListVC.tabBarItem = UITabBarItem(title: "Wish", image: UIImage(named: "wishlist"), tag: 0)
     
     window = UIWindow(windowScene: windowScene)
+    // 윈도우를 만들어준 코드 / windowScene 다운캐스팅한 친구를 넣어준다
     window?.rootViewController = tabBarController
+    // 윈도우에 루트뷰컨트롤러를 정해주는 코드 / 첫화면에 나오는 VC 넣어준다 -> 스토리보드 entryPoint
     window?.makeKeyAndVisible()
-    // makeKeyAndVisibleㄹ,ㄹ
+    // makeKeyAndVisible를 해줘야 위에서 내가 넣어준 것들이 화면에 보여진다
+    
   }
 
   func sceneDidDisconnect(_ scene: UIScene) {

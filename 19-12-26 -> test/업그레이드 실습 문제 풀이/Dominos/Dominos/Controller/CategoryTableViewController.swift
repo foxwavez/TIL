@@ -17,6 +17,10 @@ class CategoryTableViewController: UITableViewController {
     // self.clearsSelectionOnViewWillAppear = false
   }
   
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        <#code#>
+    }
+    
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     menuData.count
   }
