@@ -14,7 +14,7 @@ func throwNSError() throws {
 
 func throwsNSErrorExample() {
   do {
-    try throwNSError()
+    try throwNSError() // 에러가 발생할 때 실행
   } catch {
     print("Error :", error)
     

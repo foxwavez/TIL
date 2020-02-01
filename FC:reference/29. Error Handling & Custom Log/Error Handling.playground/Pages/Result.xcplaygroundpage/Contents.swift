@@ -49,6 +49,8 @@ func downloadImage(
 let url = "https://loremflickr.com/320/240/dog"
 //let url = "No Image Url"
 
+
+
 downloadImage(from: url) { result in
   switch result {
   case .success(let data):
@@ -67,7 +69,7 @@ downloadImage(from: url) { result in
 // 2) get()을 통해 성공한 경우에만 데이터를 가져옴. 아니면 nil 반환
 
 downloadImage(from: url) { result in
-  if let data = try? result.get() {
+  if let data = try? result.get() { // get을 사용하려면 try?가 필요하다
     print("\(data) image download complete")
   }
 }
@@ -77,6 +79,7 @@ downloadImage(from: url) { result in
 
 let result = Result { try String(contentsOfFile: "ABC") }
 print(try? result.get())
+
 
 
 //: [Next](@next)

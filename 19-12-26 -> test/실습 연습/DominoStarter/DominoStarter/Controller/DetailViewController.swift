@@ -12,12 +12,13 @@ class DetailViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    setUI()
     
   }
 
     private func setUI() {
-        
+        view.backgroundColor = .white
+        self.navigationItem.title = "Detail"
     }
     
 }

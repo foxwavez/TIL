@@ -54,6 +54,7 @@ extension CustomizedError: LocalizedError {
     case .errorWithoutParam:
        return "Error without parameter"
 //       return NSLocalizedString("Error without parameter", comment: "")
+        // NSLocalizedString -> 다국어 지원을 할 때 쓰는 것 로컬라이징을 위해 이 특정 단어는 이렇게 변환해라 같은
     case .errorWithParam(let x):
       return "Error with param \(x)"
     }
@@ -88,11 +89,11 @@ customNSErrorExample()
 // CustomNSError 프로토콜
 // > errorDomain, errorCode, errorUserInfo 정의
 
-//extension CustomizedError: CustomNSError {
-//  static var errorDomain: String { return "오류 발생 영역이나 범주 등" }
-//  var errorCode: Int { return -10 }
-//  var errorUserInfo: [String : Any] { return ["커스텀": "데이터 정의"] }
-//}
+extension CustomizedError: CustomNSError {
+  static var errorDomain: String { return "오류 발생 영역이나 범주 등" }
+  var errorCode: Int { return -10 }
+  var errorUserInfo: [String : Any] { return ["커스텀": "데이터 정의"] }
+}
 
 
 
