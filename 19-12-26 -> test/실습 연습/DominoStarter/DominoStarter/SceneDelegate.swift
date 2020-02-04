@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     listVC.tabBarItem = UITabBarItem(title: "Domino's", image: UIImage(named: "domino's"), tag: 0)
     wishListVC.tabBarItem = UITabBarItem(title: "Wish", image: UIImage(named: "wishlist"), tag: 0)
-    subListVC.tabBarItem = UITabBarItem(title: "SubList", image: nil, tag: 0)
+    subListVC.tabBarItem = UITabBarItem(title: "SubList", image: nil, tag: 0 )
     
     window = UIWindow(windowScene: windowScene)
     // 윈도우를 만들어준 코드 / windowScene 다운캐스팅한 친구를 넣어준다

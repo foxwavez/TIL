@@ -44,7 +44,7 @@ class SubListViewController: UIViewController {
     }
 }
 
-// MARK: - UITableViewDataSource
+
 extension SubListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuData.count
