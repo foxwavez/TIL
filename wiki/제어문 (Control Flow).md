@@ -87,5 +87,82 @@ for tickMark in stride(from: 3, through: hours, by: hourInterval)
 
 <hr/>
 
+## While 문 (While Loops)
+
+Swift에서는  `while`과 `repeat-while` 두 가지 종류의 `while`  문을 지원합니다.
+
+### While
+
+조건(condition)이 거짓(fasle)일 때까지 구문(statements)을 반복합니다.
+
+```swift
+while condition {
+statements
+}
+```
+
+`while` 문의 (예)
+
+```swift
+var sqaure = 0 
+var diceRoll = 0
+while square < finalSquare {
+  // roll the dice
+  diceRoll += 1
+  if diceRoll == 8 { diceRoll = 1 }
+  // move by the rolled amount
+  square += diceRoll
+  if square < board.count {
+    // if we're still on the board, move up ot down for a snake or ladder
+    square += board[square]
+  }
+}
+print("Game over!")
+```
+
+## Repeat-While 문 
+
+> `repeat-while` 문은 다른 언어의 `do-while`문과 유사한 `while` 문입니다.
+
+*구문(statements)을 최소 한 번 이상 실행하고 `while`조건이 거짓일 때까지 반복합니다.*
+
+```swift
+repeat {
+  statemetns
+} while condition
+```
+
+`repeat-while`문의 (예)
+
+```swift
+var square = 0
+var diceRoll = 0
+repeat {
+// move up or down for snake or ladder
+  square += board[square]
+  // roll the dice
+  diceRoll += 1
+  if diceRoll == 7 { diceRoll = 1 }
+  // move by the rolled amount
+  square += diceRoll
+} while square < finalSquare
+print("Game over!")
+```
+
+<hr/>
+
+## 조건적 구문 (Conditional Statements)
+
+Swift에서는 `if` 와 `switch`문 두가지의 조건 구문을 제공합니다.
+
+### If문
+
+(예1) `if` 만 사용
+
+```swift
+var temperatureInFahrenheit = 30
+if temperatrue
+```
+
 
 
