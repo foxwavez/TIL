@@ -161,8 +161,80 @@ Swift에서는 `if` 와 `switch`문 두가지의 조건 구문을 제공합니�
 
 ```swift
 var temperatureInFahrenheit = 30
-if temperatrue
+if temperatrue temperatureInFahrenheit <= 32 {
+  print("It's veery cold. Consider wearing a scarf.")
+}
+// print "It's very cold. Consider wearing a scarf"
 ```
 
+(예2) `else` 를 사용
 
+``` swift
+temperatureInFahrenheit = 40 
+if temperatureInFahrenheit <= 32 {
+  print("It's very cold. Consider wearing a scarf.")
+} else {
+  print("It's not that cold. Wear a t-shirt")
+}
+// Prints "It's not that cold. Wear a t-shirt."
+```
 
+(예3)  `else`  , `else-if` 를 사용
+
+```swift
+temperatureInFahrenheit = 40 
+if temperatureInFahrenheit <= 32 {
+  print("It's very cold. Consider wearing a scarf.")
+} else if {
+  print("It's really warm. Don't forget to wear. sunscreen")
+} else {
+  print("It's not that cold. Wear a t-shirt")
+}
+// Prints "It's really warm. Don't forget to wear. sunscreen
+```
+
+(예4) `else-if` 만 사용
+
+```swift
+temperatrueInFahrenheit = 72
+if temperatureInFahrenheit <= 32 {
+  print("It's very cold. Consider wearing a scarf.")
+} els if temperatrueInFahrenheit > = 86 {
+  print("It's really warm. Don't forget to wear surscreen")
+}
+```
+
+### Switch
+
+Switch문의 기본 형태는 다음과 같습니다.
+
+```swift
+switch some value to consider {
+  case value 1: 
+  	respond to value 1
+  case value 2,
+  		 value 3:
+  			respond to value 2 or 3
+  default:
+  	otherwise, do someting else
+}
+```
+
+문자를 바교해 처리하는 경우 아래와 같이 사용할 수 있습니다.
+
+```swift
+let someCharacter: Character = "z"
+switch someChatacter {
+  case "a":
+  	print("The first letter of the alphabet")
+  case "z":
+  	print("The last letter of the alphabet")
+  default:
+  	print("Some other character")
+}
+// Prints "THe last letter of the alphabet"
+```
+
+### 암시적인 진행을 사용하지 않음 (No Implicit Fallthough)
+
+C와 Object-C의 `switch` 구문과는 달리 Swift의 `

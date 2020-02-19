@@ -6,9 +6,16 @@ target 'FirebasePractice' do
   use_frameworks!
 
   # Pods for FirebasePractice
-  pod 'Firebase/Core'
-  pod 'Firebase/Firestore'
-  pod 'FirebaseFirestoreSwift'
+#  pod 'Firebase/Core'
+#  pod 'Firebase/Firestore'
+#  pod 'FirebaseFirestoreSwift'
+
   pod 'Firebase/Database'
+
+  pod 'Firebase/Analytics'
+  pod 'Firebase/RemoteConfig'
+
+  pod 'FirebaseUI'
+#  pod 'Firebase/Auth'
 
 end
