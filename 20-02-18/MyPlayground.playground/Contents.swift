@@ -1,19 +1,23 @@
 import UIKit
 
 
-
-
-var square = 0
-var diceRoll = 0
-while square < finalSquare {
-    // roll the dice
-    diceRoll += 1
-    if diceRoll == 7 { diceRoll = 1 }
-    // move by the rolled amount
-    square += diceRoll
-    if square < board.count {
-        // if we're still on the board, move up or down for a snake or a ladder
-        square += board[square]
-    }
+let numberSymbol: Character = "三" //중국어로 3을 의미라는 문자입니다.
+var possibleIntegerValue: Int?
+switch numberSymbol {
+case "1", "١", "一", "๑":
+  possibleIntegerValue = 1
+case "2", "٢", "二", "๒":
+  possibleIntegerValue = 2
+case "3", "٣", "三", "๓":
+    break
+  possibleIntegerValue = 3
+case "4", "٤", "四", "๔":
+  possibleIntegerValue = 4
+default:
+  break
 }
-print("Game over!")
+if let integerValue = possibleIntegerValue {
+  print("The integer value of \(numberSymbol) is \(integerValue).")
+} else {
+  print("An integer value could not be found for \(numberSymbol)")
+}
