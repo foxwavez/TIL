@@ -503,6 +503,8 @@ print("Game Over")
 
 `guard` 문을 이용해 특정 조선을 만족하지 않으면 이 후 코드를 실행하지 않도록 바어코드를 작성할 수 있습니다.
 
+*`guard` 문은 함수 안에서만 사용 가능합니다.* 
+
 ``` swift
 func greet(person: [String: String]) {
   guard let name = person["name"] else {
@@ -549,3 +551,6 @@ if #available(iOS 10, macOS 10.12, *) {
 }
 ```
 
+***
+
+2020.2.19
